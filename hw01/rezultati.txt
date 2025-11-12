@@ -1,0 +1,7052 @@
+========================================
+INZENJERSKI OPTIMIZACIONI ALGORITMI
+Domaci zadatak 1
+----------------------------------------
+Autor: Jovan Mosurovic 2022/0589
+========================================
+
+ZADATAK:
+------------------
+Kupac je kupio cetiri proizvoda.
+Zbir svih cena: $9.78
+Proizvod svih cena: $9.78
+Cene se zaokruzuju na $0.01 (1 cent)
+
+USLOVI:
+p1 + p2 + p3 + p4 = 9.78
+p1 x p2 x p3 x p4 = 9.78
+0.01 <= pi <= 9.78, i = 1,2,3,4
+
+========================================
+(a) METOD SA 4 CENE - POTPUNA PRETRAGA
+========================================
+
+Teorijski maksimalan broj poziva: 978^4 = 914,861,642,256
+Stvarni broj poziva: 914861642256
+Vreme izvrsavanja: 2214.95 sekundi
+                   ≈ 36.92 minuta
+                   ≈ 0.62 sati
+
+PRONADJENA RESENJA - METOD (a)
+========================================
+
+Ukupan broj resenja: 696
+
+Resenje 1:
+  Cene: $0.32, $2.60, $3.33, $3.53
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 2:
+  Cene: $0.32, $2.60, $3.53, $3.33
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 3:
+  Cene: $0.32, $3.33, $2.60, $3.53
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 4:
+  Cene: $0.32, $3.33, $3.53, $2.60
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 5:
+  Cene: $0.32, $3.53, $2.60, $3.33
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 6:
+  Cene: $0.32, $3.53, $3.33, $2.60
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 7:
+  Cene: $0.34, $2.27, $3.16, $4.01
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 8:
+  Cene: $0.34, $2.27, $4.01, $3.16
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 9:
+  Cene: $0.34, $3.16, $2.27, $4.01
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 10:
+  Cene: $0.34, $3.16, $4.01, $2.27
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 11:
+  Cene: $0.34, $4.01, $2.27, $3.16
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 12:
+  Cene: $0.34, $4.01, $3.16, $2.27
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 13:
+  Cene: $0.35, $2.10, $3.31, $4.02
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 14:
+  Cene: $0.35, $2.10, $4.02, $3.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 15:
+  Cene: $0.35, $3.31, $2.10, $4.02
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 16:
+  Cene: $0.35, $3.31, $4.02, $2.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 17:
+  Cene: $0.35, $4.02, $2.10, $3.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 18:
+  Cene: $0.35, $4.02, $3.31, $2.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 19:
+  Cene: $0.37, $1.89, $3.37, $4.15
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 20:
+  Cene: $0.37, $1.89, $4.15, $3.37
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 21:
+  Cene: $0.37, $3.37, $1.89, $4.15
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 22:
+  Cene: $0.37, $3.37, $4.15, $1.89
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 23:
+  Cene: $0.37, $4.15, $1.89, $3.37
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 24:
+  Cene: $0.37, $4.15, $3.37, $1.89
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 25:
+  Cene: $0.38, $2.23, $2.44, $4.73
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 26:
+  Cene: $0.38, $2.23, $4.73, $2.44
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 27:
+  Cene: $0.38, $2.44, $2.23, $4.73
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 28:
+  Cene: $0.38, $2.44, $4.73, $2.23
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 29:
+  Cene: $0.38, $4.73, $2.23, $2.44
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 30:
+  Cene: $0.38, $4.73, $2.44, $2.23
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 31:
+  Cene: $0.40, $1.63, $3.75, $4.00
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 32:
+  Cene: $0.40, $1.63, $4.00, $3.75
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 33:
+  Cene: $0.40, $1.76, $3.02, $4.60
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 34:
+  Cene: $0.40, $1.76, $4.60, $3.02
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 35:
+  Cene: $0.40, $2.11, $2.36, $4.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 36:
+  Cene: $0.40, $2.11, $4.91, $2.36
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 37:
+  Cene: $0.40, $2.36, $2.11, $4.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 38:
+  Cene: $0.40, $2.36, $4.91, $2.11
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 39:
+  Cene: $0.40, $3.02, $1.76, $4.60
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 40:
+  Cene: $0.40, $3.02, $4.60, $1.76
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 41:
+  Cene: $0.40, $3.75, $1.63, $4.00
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 42:
+  Cene: $0.40, $3.75, $4.00, $1.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 43:
+  Cene: $0.40, $4.00, $1.63, $3.75
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 44:
+  Cene: $0.40, $4.00, $3.75, $1.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 45:
+  Cene: $0.40, $4.60, $1.76, $3.02
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 46:
+  Cene: $0.40, $4.60, $3.02, $1.76
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 47:
+  Cene: $0.40, $4.91, $2.11, $2.36
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 48:
+  Cene: $0.40, $4.91, $2.36, $2.11
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 49:
+  Cene: $0.43, $1.53, $3.26, $4.56
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 50:
+  Cene: $0.43, $1.53, $4.56, $3.26
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 51:
+  Cene: $0.43, $3.26, $1.53, $4.56
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 52:
+  Cene: $0.43, $3.26, $4.56, $1.53
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 53:
+  Cene: $0.43, $4.56, $1.53, $3.26
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 54:
+  Cene: $0.43, $4.56, $3.26, $1.53
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 55:
+  Cene: $0.46, $1.94, $2.06, $5.32
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 56:
+  Cene: $0.46, $1.94, $5.32, $2.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 57:
+  Cene: $0.46, $2.06, $1.94, $5.32
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 58:
+  Cene: $0.46, $2.06, $5.32, $1.94
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 59:
+  Cene: $0.46, $5.32, $1.94, $2.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 60:
+  Cene: $0.46, $5.32, $2.06, $1.94
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 61:
+  Cene: $0.47, $1.31, $3.66, $4.34
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 62:
+  Cene: $0.47, $1.31, $4.34, $3.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 63:
+  Cene: $0.47, $3.66, $1.31, $4.34
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 64:
+  Cene: $0.47, $3.66, $4.34, $1.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 65:
+  Cene: $0.47, $4.34, $1.31, $3.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 66:
+  Cene: $0.47, $4.34, $3.66, $1.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 67:
+  Cene: $0.57, $1.04, $3.65, $4.52
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 68:
+  Cene: $0.57, $1.04, $4.52, $3.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 69:
+  Cene: $0.57, $1.51, $1.99, $5.71
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 70:
+  Cene: $0.57, $1.51, $5.71, $1.99
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 71:
+  Cene: $0.57, $1.59, $1.88, $5.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 72:
+  Cene: $0.57, $1.59, $5.74, $1.88
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 73:
+  Cene: $0.57, $1.88, $1.59, $5.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 74:
+  Cene: $0.57, $1.88, $5.74, $1.59
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 75:
+  Cene: $0.57, $1.99, $1.51, $5.71
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 76:
+  Cene: $0.57, $1.99, $5.71, $1.51
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 77:
+  Cene: $0.57, $3.65, $1.04, $4.52
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 78:
+  Cene: $0.57, $3.65, $4.52, $1.04
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 79:
+  Cene: $0.57, $4.52, $1.04, $3.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 80:
+  Cene: $0.57, $4.52, $3.65, $1.04
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 81:
+  Cene: $0.57, $5.71, $1.51, $1.99
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 82:
+  Cene: $0.57, $5.71, $1.99, $1.51
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 83:
+  Cene: $0.57, $5.74, $1.59, $1.88
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 84:
+  Cene: $0.57, $5.74, $1.88, $1.59
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 85:
+  Cene: $0.63, $1.10, $2.58, $5.47
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 86:
+  Cene: $0.63, $1.10, $5.47, $2.58
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 87:
+  Cene: $0.63, $2.58, $1.10, $5.47
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 88:
+  Cene: $0.63, $2.58, $5.47, $1.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 89:
+  Cene: $0.63, $5.47, $1.10, $2.58
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 90:
+  Cene: $0.63, $5.47, $2.58, $1.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 91:
+  Cene: $0.64, $0.91, $3.74, $4.49
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 92:
+  Cene: $0.64, $0.91, $4.49, $3.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 93:
+  Cene: $0.64, $0.96, $3.19, $4.99
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 94:
+  Cene: $0.64, $0.96, $4.99, $3.19
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 95:
+  Cene: $0.64, $3.19, $0.96, $4.99
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 96:
+  Cene: $0.64, $3.19, $4.99, $0.96
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 97:
+  Cene: $0.64, $3.74, $0.91, $4.49
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 98:
+  Cene: $0.64, $3.74, $4.49, $0.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 99:
+  Cene: $0.64, $4.49, $0.91, $3.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 100:
+  Cene: $0.64, $4.49, $3.74, $0.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 101:
+  Cene: $0.64, $4.99, $0.96, $3.19
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 102:
+  Cene: $0.64, $4.99, $3.19, $0.96
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 103:
+  Cene: $0.65, $1.31, $1.96, $5.86
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 104:
+  Cene: $0.65, $1.31, $5.86, $1.96
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 105:
+  Cene: $0.65, $1.49, $1.70, $5.94
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 106:
+  Cene: $0.65, $1.49, $5.94, $1.70
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 107:
+  Cene: $0.65, $1.70, $1.49, $5.94
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 108:
+  Cene: $0.65, $1.70, $5.94, $1.49
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 109:
+  Cene: $0.65, $1.96, $1.31, $5.86
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 110:
+  Cene: $0.65, $1.96, $5.86, $1.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 111:
+  Cene: $0.65, $5.86, $1.31, $1.96
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 112:
+  Cene: $0.65, $5.86, $1.96, $1.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 113:
+  Cene: $0.65, $5.94, $1.49, $1.70
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 114:
+  Cene: $0.65, $5.94, $1.70, $1.49
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 115:
+  Cene: $0.66, $1.23, $2.07, $5.82
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 116:
+  Cene: $0.66, $1.23, $5.82, $2.07
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 117:
+  Cene: $0.66, $2.07, $1.23, $5.82
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 118:
+  Cene: $0.66, $2.07, $5.82, $1.23
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 119:
+  Cene: $0.66, $5.82, $1.23, $2.07
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 120:
+  Cene: $0.66, $5.82, $2.07, $1.23
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 121:
+  Cene: $0.67, $0.90, $3.31, $4.90
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 122:
+  Cene: $0.67, $0.90, $4.90, $3.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 123:
+  Cene: $0.67, $3.31, $0.90, $4.90
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 124:
+  Cene: $0.67, $3.31, $4.90, $0.90
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 125:
+  Cene: $0.67, $4.90, $0.90, $3.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 126:
+  Cene: $0.67, $4.90, $3.31, $0.90
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 127:
+  Cene: $0.68, $1.06, $2.41, $5.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 128:
+  Cene: $0.68, $1.06, $5.63, $2.41
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 129:
+  Cene: $0.68, $1.15, $2.16, $5.79
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 130:
+  Cene: $0.68, $1.15, $5.79, $2.16
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 131:
+  Cene: $0.68, $2.16, $1.15, $5.79
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 132:
+  Cene: $0.68, $2.16, $5.79, $1.15
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 133:
+  Cene: $0.68, $2.41, $1.06, $5.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 134:
+  Cene: $0.68, $2.41, $5.63, $1.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 135:
+  Cene: $0.68, $5.63, $1.06, $2.41
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 136:
+  Cene: $0.68, $5.63, $2.41, $1.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 137:
+  Cene: $0.68, $5.79, $1.15, $2.16
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 138:
+  Cene: $0.68, $5.79, $2.16, $1.15
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 139:
+  Cene: $0.70, $0.91, $2.93, $5.24
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 140:
+  Cene: $0.70, $0.91, $5.24, $2.93
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 141:
+  Cene: $0.70, $2.93, $0.91, $5.24
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 142:
+  Cene: $0.70, $2.93, $5.24, $0.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 143:
+  Cene: $0.70, $5.24, $0.91, $2.93
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 144:
+  Cene: $0.70, $5.24, $2.93, $0.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 145:
+  Cene: $0.71, $1.06, $2.26, $5.75
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 146:
+  Cene: $0.71, $1.06, $5.75, $2.26
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 147:
+  Cene: $0.71, $2.26, $1.06, $5.75
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 148:
+  Cene: $0.71, $2.26, $5.75, $1.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 149:
+  Cene: $0.71, $5.75, $1.06, $2.26
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 150:
+  Cene: $0.71, $5.75, $2.26, $1.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 151:
+  Cene: $0.74, $0.79, $3.59, $4.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 152:
+  Cene: $0.74, $0.79, $4.66, $3.59
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 153:
+  Cene: $0.74, $3.59, $0.79, $4.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 154:
+  Cene: $0.74, $3.59, $4.66, $0.79
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 155:
+  Cene: $0.74, $4.66, $0.79, $3.59
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 156:
+  Cene: $0.74, $4.66, $3.59, $0.79
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 157:
+  Cene: $0.77, $1.40, $1.48, $6.13
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 158:
+  Cene: $0.77, $1.40, $6.13, $1.48
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 159:
+  Cene: $0.77, $1.48, $1.40, $6.13
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 160:
+  Cene: $0.77, $1.48, $6.13, $1.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 161:
+  Cene: $0.77, $6.13, $1.40, $1.48
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 162:
+  Cene: $0.77, $6.13, $1.48, $1.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 163:
+  Cene: $0.79, $0.74, $3.59, $4.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 164:
+  Cene: $0.79, $0.74, $4.66, $3.59
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 165:
+  Cene: $0.79, $3.59, $0.74, $4.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 166:
+  Cene: $0.79, $3.59, $4.66, $0.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 167:
+  Cene: $0.79, $4.66, $0.74, $3.59
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 168:
+  Cene: $0.79, $4.66, $3.59, $0.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 169:
+  Cene: $0.80, $1.10, $1.84, $6.04
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 170:
+  Cene: $0.80, $1.10, $6.04, $1.84
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 171:
+  Cene: $0.80, $1.84, $1.10, $6.04
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 172:
+  Cene: $0.80, $1.84, $6.04, $1.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 173:
+  Cene: $0.80, $6.04, $1.10, $1.84
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 174:
+  Cene: $0.80, $6.04, $1.84, $1.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 175:
+  Cene: $0.90, $0.67, $3.31, $4.90
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 176:
+  Cene: $0.90, $0.67, $4.90, $3.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 177:
+  Cene: $0.90, $3.31, $0.67, $4.90
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 178:
+  Cene: $0.90, $3.31, $4.90, $0.67
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 179:
+  Cene: $0.90, $4.90, $0.67, $3.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 180:
+  Cene: $0.90, $4.90, $3.31, $0.67
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 181:
+  Cene: $0.91, $0.64, $3.74, $4.49
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 182:
+  Cene: $0.91, $0.64, $4.49, $3.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 183:
+  Cene: $0.91, $0.70, $2.93, $5.24
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 184:
+  Cene: $0.91, $0.70, $5.24, $2.93
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 185:
+  Cene: $0.91, $2.93, $0.70, $5.24
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 186:
+  Cene: $0.91, $2.93, $5.24, $0.70
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 187:
+  Cene: $0.91, $3.74, $0.64, $4.49
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 188:
+  Cene: $0.91, $3.74, $4.49, $0.64
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 189:
+  Cene: $0.91, $4.49, $0.64, $3.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 190:
+  Cene: $0.91, $4.49, $3.74, $0.64
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 191:
+  Cene: $0.91, $5.24, $0.70, $2.93
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 192:
+  Cene: $0.91, $5.24, $2.93, $0.70
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 193:
+  Cene: $0.95, $1.13, $1.46, $6.24
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 194:
+  Cene: $0.95, $1.13, $6.24, $1.46
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 195:
+  Cene: $0.95, $1.46, $1.13, $6.24
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 196:
+  Cene: $0.95, $1.46, $6.24, $1.13
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 197:
+  Cene: $0.95, $6.24, $1.13, $1.46
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 198:
+  Cene: $0.95, $6.24, $1.46, $1.13
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 199:
+  Cene: $0.96, $0.64, $3.19, $4.99
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 200:
+  Cene: $0.96, $0.64, $4.99, $3.19
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 201:
+  Cene: $0.96, $3.19, $0.64, $4.99
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 202:
+  Cene: $0.96, $3.19, $4.99, $0.64
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 203:
+  Cene: $0.96, $4.99, $0.64, $3.19
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 204:
+  Cene: $0.96, $4.99, $3.19, $0.64
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 205:
+  Cene: $1.04, $0.57, $3.65, $4.52
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 206:
+  Cene: $1.04, $0.57, $4.52, $3.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 207:
+  Cene: $1.04, $3.65, $0.57, $4.52
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 208:
+  Cene: $1.04, $3.65, $4.52, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 209:
+  Cene: $1.04, $4.52, $0.57, $3.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 210:
+  Cene: $1.04, $4.52, $3.65, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 211:
+  Cene: $1.06, $0.68, $2.41, $5.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 212:
+  Cene: $1.06, $0.68, $5.63, $2.41
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 213:
+  Cene: $1.06, $0.71, $2.26, $5.75
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 214:
+  Cene: $1.06, $0.71, $5.75, $2.26
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 215:
+  Cene: $1.06, $2.26, $0.71, $5.75
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 216:
+  Cene: $1.06, $2.26, $5.75, $0.71
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 217:
+  Cene: $1.06, $2.41, $0.68, $5.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 218:
+  Cene: $1.06, $2.41, $5.63, $0.68
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 219:
+  Cene: $1.06, $5.63, $0.68, $2.41
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 220:
+  Cene: $1.06, $5.63, $2.41, $0.68
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 221:
+  Cene: $1.06, $5.75, $0.71, $2.26
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 222:
+  Cene: $1.06, $5.75, $2.26, $0.71
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 223:
+  Cene: $1.10, $0.63, $2.58, $5.47
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 224:
+  Cene: $1.10, $0.63, $5.47, $2.58
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 225:
+  Cene: $1.10, $0.80, $1.84, $6.04
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 226:
+  Cene: $1.10, $0.80, $6.04, $1.84
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 227:
+  Cene: $1.10, $1.84, $0.80, $6.04
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 228:
+  Cene: $1.10, $1.84, $6.04, $0.80
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 229:
+  Cene: $1.10, $2.58, $0.63, $5.47
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 230:
+  Cene: $1.10, $2.58, $5.47, $0.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 231:
+  Cene: $1.10, $5.47, $0.63, $2.58
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 232:
+  Cene: $1.10, $5.47, $2.58, $0.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 233:
+  Cene: $1.10, $6.04, $0.80, $1.84
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 234:
+  Cene: $1.10, $6.04, $1.84, $0.80
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 235:
+  Cene: $1.13, $0.95, $1.46, $6.24
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 236:
+  Cene: $1.13, $0.95, $6.24, $1.46
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 237:
+  Cene: $1.13, $1.46, $0.95, $6.24
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 238:
+  Cene: $1.13, $1.46, $6.24, $0.95
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 239:
+  Cene: $1.13, $6.24, $0.95, $1.46
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 240:
+  Cene: $1.13, $6.24, $1.46, $0.95
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 241:
+  Cene: $1.15, $0.68, $2.16, $5.79
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 242:
+  Cene: $1.15, $0.68, $5.79, $2.16
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 243:
+  Cene: $1.15, $2.16, $0.68, $5.79
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 244:
+  Cene: $1.15, $2.16, $5.79, $0.68
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 245:
+  Cene: $1.15, $5.79, $0.68, $2.16
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 246:
+  Cene: $1.15, $5.79, $2.16, $0.68
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 247:
+  Cene: $1.23, $0.66, $2.07, $5.82
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 248:
+  Cene: $1.23, $0.66, $5.82, $2.07
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 249:
+  Cene: $1.23, $2.07, $0.66, $5.82
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 250:
+  Cene: $1.23, $2.07, $5.82, $0.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 251:
+  Cene: $1.23, $5.82, $0.66, $2.07
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 252:
+  Cene: $1.23, $5.82, $2.07, $0.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 253:
+  Cene: $1.31, $0.47, $3.66, $4.34
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 254:
+  Cene: $1.31, $0.47, $4.34, $3.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 255:
+  Cene: $1.31, $0.65, $1.96, $5.86
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 256:
+  Cene: $1.31, $0.65, $5.86, $1.96
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 257:
+  Cene: $1.31, $1.96, $0.65, $5.86
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 258:
+  Cene: $1.31, $1.96, $5.86, $0.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 259:
+  Cene: $1.31, $3.66, $0.47, $4.34
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 260:
+  Cene: $1.31, $3.66, $4.34, $0.47
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 261:
+  Cene: $1.31, $4.34, $0.47, $3.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 262:
+  Cene: $1.31, $4.34, $3.66, $0.47
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 263:
+  Cene: $1.31, $5.86, $0.65, $1.96
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 264:
+  Cene: $1.31, $5.86, $1.96, $0.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 265:
+  Cene: $1.40, $0.77, $1.48, $6.13
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 266:
+  Cene: $1.40, $0.77, $6.13, $1.48
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 267:
+  Cene: $1.40, $1.48, $0.77, $6.13
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 268:
+  Cene: $1.40, $1.48, $6.13, $0.77
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 269:
+  Cene: $1.40, $6.13, $0.77, $1.48
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 270:
+  Cene: $1.40, $6.13, $1.48, $0.77
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 271:
+  Cene: $1.46, $0.95, $1.13, $6.24
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 272:
+  Cene: $1.46, $0.95, $6.24, $1.13
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 273:
+  Cene: $1.46, $1.13, $0.95, $6.24
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 274:
+  Cene: $1.46, $1.13, $6.24, $0.95
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 275:
+  Cene: $1.46, $6.24, $0.95, $1.13
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 276:
+  Cene: $1.46, $6.24, $1.13, $0.95
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 277:
+  Cene: $1.48, $0.77, $1.40, $6.13
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 278:
+  Cene: $1.48, $0.77, $6.13, $1.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 279:
+  Cene: $1.48, $1.40, $0.77, $6.13
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 280:
+  Cene: $1.48, $1.40, $6.13, $0.77
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 281:
+  Cene: $1.48, $6.13, $0.77, $1.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 282:
+  Cene: $1.48, $6.13, $1.40, $0.77
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 283:
+  Cene: $1.49, $0.65, $1.70, $5.94
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 284:
+  Cene: $1.49, $0.65, $5.94, $1.70
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 285:
+  Cene: $1.49, $1.70, $0.65, $5.94
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 286:
+  Cene: $1.49, $1.70, $5.94, $0.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 287:
+  Cene: $1.49, $5.94, $0.65, $1.70
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 288:
+  Cene: $1.49, $5.94, $1.70, $0.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 289:
+  Cene: $1.51, $0.57, $1.99, $5.71
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 290:
+  Cene: $1.51, $0.57, $5.71, $1.99
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 291:
+  Cene: $1.51, $1.99, $0.57, $5.71
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 292:
+  Cene: $1.51, $1.99, $5.71, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 293:
+  Cene: $1.51, $5.71, $0.57, $1.99
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 294:
+  Cene: $1.51, $5.71, $1.99, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 295:
+  Cene: $1.53, $0.43, $3.26, $4.56
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 296:
+  Cene: $1.53, $0.43, $4.56, $3.26
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 297:
+  Cene: $1.53, $3.26, $0.43, $4.56
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 298:
+  Cene: $1.53, $3.26, $4.56, $0.43
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 299:
+  Cene: $1.53, $4.56, $0.43, $3.26
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 300:
+  Cene: $1.53, $4.56, $3.26, $0.43
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 301:
+  Cene: $1.59, $0.57, $1.88, $5.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 302:
+  Cene: $1.59, $0.57, $5.74, $1.88
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 303:
+  Cene: $1.59, $1.88, $0.57, $5.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 304:
+  Cene: $1.59, $1.88, $5.74, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 305:
+  Cene: $1.59, $5.74, $0.57, $1.88
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 306:
+  Cene: $1.59, $5.74, $1.88, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 307:
+  Cene: $1.63, $0.40, $3.75, $4.00
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 308:
+  Cene: $1.63, $0.40, $4.00, $3.75
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 309:
+  Cene: $1.63, $3.75, $0.40, $4.00
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 310:
+  Cene: $1.63, $3.75, $4.00, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 311:
+  Cene: $1.63, $4.00, $0.40, $3.75
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 312:
+  Cene: $1.63, $4.00, $3.75, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 313:
+  Cene: $1.70, $0.65, $1.49, $5.94
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 314:
+  Cene: $1.70, $0.65, $5.94, $1.49
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 315:
+  Cene: $1.70, $1.49, $0.65, $5.94
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 316:
+  Cene: $1.70, $1.49, $5.94, $0.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 317:
+  Cene: $1.70, $5.94, $0.65, $1.49
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 318:
+  Cene: $1.70, $5.94, $1.49, $0.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 319:
+  Cene: $1.76, $0.40, $3.02, $4.60
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 320:
+  Cene: $1.76, $0.40, $4.60, $3.02
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 321:
+  Cene: $1.76, $3.02, $0.40, $4.60
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 322:
+  Cene: $1.76, $3.02, $4.60, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 323:
+  Cene: $1.76, $4.60, $0.40, $3.02
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 324:
+  Cene: $1.76, $4.60, $3.02, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 325:
+  Cene: $1.84, $0.80, $1.10, $6.04
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 326:
+  Cene: $1.84, $0.80, $6.04, $1.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 327:
+  Cene: $1.84, $1.10, $0.80, $6.04
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 328:
+  Cene: $1.84, $1.10, $6.04, $0.80
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 329:
+  Cene: $1.84, $6.04, $0.80, $1.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 330:
+  Cene: $1.84, $6.04, $1.10, $0.80
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 331:
+  Cene: $1.88, $0.57, $1.59, $5.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 332:
+  Cene: $1.88, $0.57, $5.74, $1.59
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 333:
+  Cene: $1.88, $1.59, $0.57, $5.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 334:
+  Cene: $1.88, $1.59, $5.74, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 335:
+  Cene: $1.88, $5.74, $0.57, $1.59
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 336:
+  Cene: $1.88, $5.74, $1.59, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 337:
+  Cene: $1.89, $0.37, $3.37, $4.15
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 338:
+  Cene: $1.89, $0.37, $4.15, $3.37
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 339:
+  Cene: $1.89, $3.37, $0.37, $4.15
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 340:
+  Cene: $1.89, $3.37, $4.15, $0.37
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 341:
+  Cene: $1.89, $4.15, $0.37, $3.37
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 342:
+  Cene: $1.89, $4.15, $3.37, $0.37
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 343:
+  Cene: $1.94, $0.46, $2.06, $5.32
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 344:
+  Cene: $1.94, $0.46, $5.32, $2.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 345:
+  Cene: $1.94, $2.06, $0.46, $5.32
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 346:
+  Cene: $1.94, $2.06, $5.32, $0.46
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 347:
+  Cene: $1.94, $5.32, $0.46, $2.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 348:
+  Cene: $1.94, $5.32, $2.06, $0.46
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 349:
+  Cene: $1.96, $0.65, $1.31, $5.86
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 350:
+  Cene: $1.96, $0.65, $5.86, $1.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 351:
+  Cene: $1.96, $1.31, $0.65, $5.86
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 352:
+  Cene: $1.96, $1.31, $5.86, $0.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 353:
+  Cene: $1.96, $5.86, $0.65, $1.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 354:
+  Cene: $1.96, $5.86, $1.31, $0.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 355:
+  Cene: $1.99, $0.57, $1.51, $5.71
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 356:
+  Cene: $1.99, $0.57, $5.71, $1.51
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 357:
+  Cene: $1.99, $1.51, $0.57, $5.71
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 358:
+  Cene: $1.99, $1.51, $5.71, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 359:
+  Cene: $1.99, $5.71, $0.57, $1.51
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 360:
+  Cene: $1.99, $5.71, $1.51, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 361:
+  Cene: $2.06, $0.46, $1.94, $5.32
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 362:
+  Cene: $2.06, $0.46, $5.32, $1.94
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 363:
+  Cene: $2.06, $1.94, $0.46, $5.32
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 364:
+  Cene: $2.06, $1.94, $5.32, $0.46
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 365:
+  Cene: $2.06, $5.32, $0.46, $1.94
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 366:
+  Cene: $2.06, $5.32, $1.94, $0.46
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 367:
+  Cene: $2.07, $0.66, $1.23, $5.82
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 368:
+  Cene: $2.07, $0.66, $5.82, $1.23
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 369:
+  Cene: $2.07, $1.23, $0.66, $5.82
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 370:
+  Cene: $2.07, $1.23, $5.82, $0.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 371:
+  Cene: $2.07, $5.82, $0.66, $1.23
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 372:
+  Cene: $2.07, $5.82, $1.23, $0.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 373:
+  Cene: $2.10, $0.35, $3.31, $4.02
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 374:
+  Cene: $2.10, $0.35, $4.02, $3.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 375:
+  Cene: $2.10, $3.31, $0.35, $4.02
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 376:
+  Cene: $2.10, $3.31, $4.02, $0.35
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 377:
+  Cene: $2.10, $4.02, $0.35, $3.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 378:
+  Cene: $2.10, $4.02, $3.31, $0.35
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 379:
+  Cene: $2.11, $0.40, $2.36, $4.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 380:
+  Cene: $2.11, $0.40, $4.91, $2.36
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 381:
+  Cene: $2.11, $2.36, $0.40, $4.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 382:
+  Cene: $2.11, $2.36, $4.91, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 383:
+  Cene: $2.11, $4.91, $0.40, $2.36
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 384:
+  Cene: $2.11, $4.91, $2.36, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 385:
+  Cene: $2.16, $0.68, $1.15, $5.79
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 386:
+  Cene: $2.16, $0.68, $5.79, $1.15
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 387:
+  Cene: $2.16, $1.15, $0.68, $5.79
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 388:
+  Cene: $2.16, $1.15, $5.79, $0.68
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 389:
+  Cene: $2.16, $5.79, $0.68, $1.15
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 390:
+  Cene: $2.16, $5.79, $1.15, $0.68
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 391:
+  Cene: $2.23, $0.38, $2.44, $4.73
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 392:
+  Cene: $2.23, $0.38, $4.73, $2.44
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 393:
+  Cene: $2.23, $2.44, $0.38, $4.73
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 394:
+  Cene: $2.23, $2.44, $4.73, $0.38
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 395:
+  Cene: $2.23, $4.73, $0.38, $2.44
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 396:
+  Cene: $2.23, $4.73, $2.44, $0.38
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 397:
+  Cene: $2.26, $0.71, $1.06, $5.75
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 398:
+  Cene: $2.26, $0.71, $5.75, $1.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 399:
+  Cene: $2.26, $1.06, $0.71, $5.75
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 400:
+  Cene: $2.26, $1.06, $5.75, $0.71
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 401:
+  Cene: $2.26, $5.75, $0.71, $1.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 402:
+  Cene: $2.26, $5.75, $1.06, $0.71
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 403:
+  Cene: $2.27, $0.34, $3.16, $4.01
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 404:
+  Cene: $2.27, $0.34, $4.01, $3.16
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 405:
+  Cene: $2.27, $3.16, $0.34, $4.01
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 406:
+  Cene: $2.27, $3.16, $4.01, $0.34
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 407:
+  Cene: $2.27, $4.01, $0.34, $3.16
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 408:
+  Cene: $2.27, $4.01, $3.16, $0.34
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 409:
+  Cene: $2.36, $0.40, $2.11, $4.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 410:
+  Cene: $2.36, $0.40, $4.91, $2.11
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 411:
+  Cene: $2.36, $2.11, $0.40, $4.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 412:
+  Cene: $2.36, $2.11, $4.91, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 413:
+  Cene: $2.36, $4.91, $0.40, $2.11
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 414:
+  Cene: $2.36, $4.91, $2.11, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 415:
+  Cene: $2.41, $0.68, $1.06, $5.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 416:
+  Cene: $2.41, $0.68, $5.63, $1.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 417:
+  Cene: $2.41, $1.06, $0.68, $5.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 418:
+  Cene: $2.41, $1.06, $5.63, $0.68
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 419:
+  Cene: $2.41, $5.63, $0.68, $1.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 420:
+  Cene: $2.41, $5.63, $1.06, $0.68
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 421:
+  Cene: $2.44, $0.38, $2.23, $4.73
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 422:
+  Cene: $2.44, $0.38, $4.73, $2.23
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 423:
+  Cene: $2.44, $2.23, $0.38, $4.73
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 424:
+  Cene: $2.44, $2.23, $4.73, $0.38
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 425:
+  Cene: $2.44, $4.73, $0.38, $2.23
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 426:
+  Cene: $2.44, $4.73, $2.23, $0.38
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 427:
+  Cene: $2.58, $0.63, $1.10, $5.47
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 428:
+  Cene: $2.58, $0.63, $5.47, $1.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 429:
+  Cene: $2.58, $1.10, $0.63, $5.47
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 430:
+  Cene: $2.58, $1.10, $5.47, $0.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 431:
+  Cene: $2.58, $5.47, $0.63, $1.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 432:
+  Cene: $2.58, $5.47, $1.10, $0.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 433:
+  Cene: $2.60, $0.32, $3.33, $3.53
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 434:
+  Cene: $2.60, $0.32, $3.53, $3.33
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 435:
+  Cene: $2.60, $3.33, $0.32, $3.53
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 436:
+  Cene: $2.60, $3.33, $3.53, $0.32
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 437:
+  Cene: $2.60, $3.53, $0.32, $3.33
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 438:
+  Cene: $2.60, $3.53, $3.33, $0.32
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 439:
+  Cene: $2.93, $0.70, $0.91, $5.24
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 440:
+  Cene: $2.93, $0.70, $5.24, $0.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 441:
+  Cene: $2.93, $0.91, $0.70, $5.24
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 442:
+  Cene: $2.93, $0.91, $5.24, $0.70
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 443:
+  Cene: $2.93, $5.24, $0.70, $0.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 444:
+  Cene: $2.93, $5.24, $0.91, $0.70
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 445:
+  Cene: $3.02, $0.40, $1.76, $4.60
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 446:
+  Cene: $3.02, $0.40, $4.60, $1.76
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 447:
+  Cene: $3.02, $1.76, $0.40, $4.60
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 448:
+  Cene: $3.02, $1.76, $4.60, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 449:
+  Cene: $3.02, $4.60, $0.40, $1.76
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 450:
+  Cene: $3.02, $4.60, $1.76, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 451:
+  Cene: $3.16, $0.34, $2.27, $4.01
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 452:
+  Cene: $3.16, $0.34, $4.01, $2.27
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 453:
+  Cene: $3.16, $2.27, $0.34, $4.01
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 454:
+  Cene: $3.16, $2.27, $4.01, $0.34
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 455:
+  Cene: $3.16, $4.01, $0.34, $2.27
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 456:
+  Cene: $3.16, $4.01, $2.27, $0.34
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 457:
+  Cene: $3.19, $0.64, $0.96, $4.99
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 458:
+  Cene: $3.19, $0.64, $4.99, $0.96
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 459:
+  Cene: $3.19, $0.96, $0.64, $4.99
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 460:
+  Cene: $3.19, $0.96, $4.99, $0.64
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 461:
+  Cene: $3.19, $4.99, $0.64, $0.96
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 462:
+  Cene: $3.19, $4.99, $0.96, $0.64
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 463:
+  Cene: $3.26, $0.43, $1.53, $4.56
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 464:
+  Cene: $3.26, $0.43, $4.56, $1.53
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 465:
+  Cene: $3.26, $1.53, $0.43, $4.56
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 466:
+  Cene: $3.26, $1.53, $4.56, $0.43
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 467:
+  Cene: $3.26, $4.56, $0.43, $1.53
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 468:
+  Cene: $3.26, $4.56, $1.53, $0.43
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 469:
+  Cene: $3.31, $0.35, $2.10, $4.02
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 470:
+  Cene: $3.31, $0.35, $4.02, $2.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 471:
+  Cene: $3.31, $0.67, $0.90, $4.90
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 472:
+  Cene: $3.31, $0.67, $4.90, $0.90
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 473:
+  Cene: $3.31, $0.90, $0.67, $4.90
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 474:
+  Cene: $3.31, $0.90, $4.90, $0.67
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 475:
+  Cene: $3.31, $2.10, $0.35, $4.02
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 476:
+  Cene: $3.31, $2.10, $4.02, $0.35
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 477:
+  Cene: $3.31, $4.02, $0.35, $2.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 478:
+  Cene: $3.31, $4.02, $2.10, $0.35
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 479:
+  Cene: $3.31, $4.90, $0.67, $0.90
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 480:
+  Cene: $3.31, $4.90, $0.90, $0.67
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 481:
+  Cene: $3.33, $0.32, $2.60, $3.53
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 482:
+  Cene: $3.33, $0.32, $3.53, $2.60
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 483:
+  Cene: $3.33, $2.60, $0.32, $3.53
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 484:
+  Cene: $3.33, $2.60, $3.53, $0.32
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 485:
+  Cene: $3.33, $3.53, $0.32, $2.60
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 486:
+  Cene: $3.33, $3.53, $2.60, $0.32
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 487:
+  Cene: $3.37, $0.37, $1.89, $4.15
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 488:
+  Cene: $3.37, $0.37, $4.15, $1.89
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 489:
+  Cene: $3.37, $1.89, $0.37, $4.15
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 490:
+  Cene: $3.37, $1.89, $4.15, $0.37
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 491:
+  Cene: $3.37, $4.15, $0.37, $1.89
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 492:
+  Cene: $3.37, $4.15, $1.89, $0.37
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 493:
+  Cene: $3.53, $0.32, $2.60, $3.33
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 494:
+  Cene: $3.53, $0.32, $3.33, $2.60
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 495:
+  Cene: $3.53, $2.60, $0.32, $3.33
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 496:
+  Cene: $3.53, $2.60, $3.33, $0.32
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 497:
+  Cene: $3.53, $3.33, $0.32, $2.60
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 498:
+  Cene: $3.53, $3.33, $2.60, $0.32
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 499:
+  Cene: $3.59, $0.74, $0.79, $4.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 500:
+  Cene: $3.59, $0.74, $4.66, $0.79
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 501:
+  Cene: $3.59, $0.79, $0.74, $4.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 502:
+  Cene: $3.59, $0.79, $4.66, $0.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 503:
+  Cene: $3.59, $4.66, $0.74, $0.79
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 504:
+  Cene: $3.59, $4.66, $0.79, $0.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 505:
+  Cene: $3.65, $0.57, $1.04, $4.52
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 506:
+  Cene: $3.65, $0.57, $4.52, $1.04
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 507:
+  Cene: $3.65, $1.04, $0.57, $4.52
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 508:
+  Cene: $3.65, $1.04, $4.52, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 509:
+  Cene: $3.65, $4.52, $0.57, $1.04
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 510:
+  Cene: $3.65, $4.52, $1.04, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 511:
+  Cene: $3.66, $0.47, $1.31, $4.34
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 512:
+  Cene: $3.66, $0.47, $4.34, $1.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 513:
+  Cene: $3.66, $1.31, $0.47, $4.34
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 514:
+  Cene: $3.66, $1.31, $4.34, $0.47
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 515:
+  Cene: $3.66, $4.34, $0.47, $1.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 516:
+  Cene: $3.66, $4.34, $1.31, $0.47
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 517:
+  Cene: $3.74, $0.64, $0.91, $4.49
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 518:
+  Cene: $3.74, $0.64, $4.49, $0.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 519:
+  Cene: $3.74, $0.91, $0.64, $4.49
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 520:
+  Cene: $3.74, $0.91, $4.49, $0.64
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 521:
+  Cene: $3.74, $4.49, $0.64, $0.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 522:
+  Cene: $3.74, $4.49, $0.91, $0.64
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 523:
+  Cene: $3.75, $0.40, $1.63, $4.00
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 524:
+  Cene: $3.75, $0.40, $4.00, $1.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 525:
+  Cene: $3.75, $1.63, $0.40, $4.00
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 526:
+  Cene: $3.75, $1.63, $4.00, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 527:
+  Cene: $3.75, $4.00, $0.40, $1.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 528:
+  Cene: $3.75, $4.00, $1.63, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 529:
+  Cene: $4.00, $0.40, $1.63, $3.75
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 530:
+  Cene: $4.00, $0.40, $3.75, $1.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 531:
+  Cene: $4.00, $1.63, $0.40, $3.75
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 532:
+  Cene: $4.00, $1.63, $3.75, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 533:
+  Cene: $4.00, $3.75, $0.40, $1.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 534:
+  Cene: $4.00, $3.75, $1.63, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 535:
+  Cene: $4.01, $0.34, $2.27, $3.16
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 536:
+  Cene: $4.01, $0.34, $3.16, $2.27
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 537:
+  Cene: $4.01, $2.27, $0.34, $3.16
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 538:
+  Cene: $4.01, $2.27, $3.16, $0.34
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 539:
+  Cene: $4.01, $3.16, $0.34, $2.27
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 540:
+  Cene: $4.01, $3.16, $2.27, $0.34
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 541:
+  Cene: $4.02, $0.35, $2.10, $3.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 542:
+  Cene: $4.02, $0.35, $3.31, $2.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 543:
+  Cene: $4.02, $2.10, $0.35, $3.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 544:
+  Cene: $4.02, $2.10, $3.31, $0.35
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 545:
+  Cene: $4.02, $3.31, $0.35, $2.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 546:
+  Cene: $4.02, $3.31, $2.10, $0.35
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 547:
+  Cene: $4.15, $0.37, $1.89, $3.37
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 548:
+  Cene: $4.15, $0.37, $3.37, $1.89
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 549:
+  Cene: $4.15, $1.89, $0.37, $3.37
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 550:
+  Cene: $4.15, $1.89, $3.37, $0.37
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 551:
+  Cene: $4.15, $3.37, $0.37, $1.89
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 552:
+  Cene: $4.15, $3.37, $1.89, $0.37
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 553:
+  Cene: $4.34, $0.47, $1.31, $3.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 554:
+  Cene: $4.34, $0.47, $3.66, $1.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 555:
+  Cene: $4.34, $1.31, $0.47, $3.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 556:
+  Cene: $4.34, $1.31, $3.66, $0.47
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 557:
+  Cene: $4.34, $3.66, $0.47, $1.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 558:
+  Cene: $4.34, $3.66, $1.31, $0.47
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 559:
+  Cene: $4.49, $0.64, $0.91, $3.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 560:
+  Cene: $4.49, $0.64, $3.74, $0.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 561:
+  Cene: $4.49, $0.91, $0.64, $3.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 562:
+  Cene: $4.49, $0.91, $3.74, $0.64
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 563:
+  Cene: $4.49, $3.74, $0.64, $0.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 564:
+  Cene: $4.49, $3.74, $0.91, $0.64
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 565:
+  Cene: $4.52, $0.57, $1.04, $3.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 566:
+  Cene: $4.52, $0.57, $3.65, $1.04
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 567:
+  Cene: $4.52, $1.04, $0.57, $3.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 568:
+  Cene: $4.52, $1.04, $3.65, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 569:
+  Cene: $4.52, $3.65, $0.57, $1.04
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 570:
+  Cene: $4.52, $3.65, $1.04, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 571:
+  Cene: $4.56, $0.43, $1.53, $3.26
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 572:
+  Cene: $4.56, $0.43, $3.26, $1.53
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 573:
+  Cene: $4.56, $1.53, $0.43, $3.26
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 574:
+  Cene: $4.56, $1.53, $3.26, $0.43
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 575:
+  Cene: $4.56, $3.26, $0.43, $1.53
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 576:
+  Cene: $4.56, $3.26, $1.53, $0.43
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 577:
+  Cene: $4.60, $0.40, $1.76, $3.02
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 578:
+  Cene: $4.60, $0.40, $3.02, $1.76
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 579:
+  Cene: $4.60, $1.76, $0.40, $3.02
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 580:
+  Cene: $4.60, $1.76, $3.02, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 581:
+  Cene: $4.60, $3.02, $0.40, $1.76
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 582:
+  Cene: $4.60, $3.02, $1.76, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 583:
+  Cene: $4.66, $0.74, $0.79, $3.59
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 584:
+  Cene: $4.66, $0.74, $3.59, $0.79
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 585:
+  Cene: $4.66, $0.79, $0.74, $3.59
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 586:
+  Cene: $4.66, $0.79, $3.59, $0.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 587:
+  Cene: $4.66, $3.59, $0.74, $0.79
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 588:
+  Cene: $4.66, $3.59, $0.79, $0.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 589:
+  Cene: $4.73, $0.38, $2.23, $2.44
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 590:
+  Cene: $4.73, $0.38, $2.44, $2.23
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 591:
+  Cene: $4.73, $2.23, $0.38, $2.44
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 592:
+  Cene: $4.73, $2.23, $2.44, $0.38
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 593:
+  Cene: $4.73, $2.44, $0.38, $2.23
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 594:
+  Cene: $4.73, $2.44, $2.23, $0.38
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 595:
+  Cene: $4.90, $0.67, $0.90, $3.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 596:
+  Cene: $4.90, $0.67, $3.31, $0.90
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 597:
+  Cene: $4.90, $0.90, $0.67, $3.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 598:
+  Cene: $4.90, $0.90, $3.31, $0.67
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 599:
+  Cene: $4.90, $3.31, $0.67, $0.90
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 600:
+  Cene: $4.90, $3.31, $0.90, $0.67
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 601:
+  Cene: $4.91, $0.40, $2.11, $2.36
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 602:
+  Cene: $4.91, $0.40, $2.36, $2.11
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 603:
+  Cene: $4.91, $2.11, $0.40, $2.36
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 604:
+  Cene: $4.91, $2.11, $2.36, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 605:
+  Cene: $4.91, $2.36, $0.40, $2.11
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 606:
+  Cene: $4.91, $2.36, $2.11, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 607:
+  Cene: $4.99, $0.64, $0.96, $3.19
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 608:
+  Cene: $4.99, $0.64, $3.19, $0.96
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 609:
+  Cene: $4.99, $0.96, $0.64, $3.19
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 610:
+  Cene: $4.99, $0.96, $3.19, $0.64
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 611:
+  Cene: $4.99, $3.19, $0.64, $0.96
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 612:
+  Cene: $4.99, $3.19, $0.96, $0.64
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 613:
+  Cene: $5.24, $0.70, $0.91, $2.93
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 614:
+  Cene: $5.24, $0.70, $2.93, $0.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 615:
+  Cene: $5.24, $0.91, $0.70, $2.93
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 616:
+  Cene: $5.24, $0.91, $2.93, $0.70
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 617:
+  Cene: $5.24, $2.93, $0.70, $0.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 618:
+  Cene: $5.24, $2.93, $0.91, $0.70
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 619:
+  Cene: $5.32, $0.46, $1.94, $2.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 620:
+  Cene: $5.32, $0.46, $2.06, $1.94
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 621:
+  Cene: $5.32, $1.94, $0.46, $2.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 622:
+  Cene: $5.32, $1.94, $2.06, $0.46
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 623:
+  Cene: $5.32, $2.06, $0.46, $1.94
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 624:
+  Cene: $5.32, $2.06, $1.94, $0.46
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 625:
+  Cene: $5.47, $0.63, $1.10, $2.58
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 626:
+  Cene: $5.47, $0.63, $2.58, $1.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 627:
+  Cene: $5.47, $1.10, $0.63, $2.58
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 628:
+  Cene: $5.47, $1.10, $2.58, $0.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 629:
+  Cene: $5.47, $2.58, $0.63, $1.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 630:
+  Cene: $5.47, $2.58, $1.10, $0.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 631:
+  Cene: $5.63, $0.68, $1.06, $2.41
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 632:
+  Cene: $5.63, $0.68, $2.41, $1.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 633:
+  Cene: $5.63, $1.06, $0.68, $2.41
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 634:
+  Cene: $5.63, $1.06, $2.41, $0.68
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 635:
+  Cene: $5.63, $2.41, $0.68, $1.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 636:
+  Cene: $5.63, $2.41, $1.06, $0.68
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 637:
+  Cene: $5.71, $0.57, $1.51, $1.99
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 638:
+  Cene: $5.71, $0.57, $1.99, $1.51
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 639:
+  Cene: $5.71, $1.51, $0.57, $1.99
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 640:
+  Cene: $5.71, $1.51, $1.99, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 641:
+  Cene: $5.71, $1.99, $0.57, $1.51
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 642:
+  Cene: $5.71, $1.99, $1.51, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 643:
+  Cene: $5.74, $0.57, $1.59, $1.88
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 644:
+  Cene: $5.74, $0.57, $1.88, $1.59
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 645:
+  Cene: $5.74, $1.59, $0.57, $1.88
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 646:
+  Cene: $5.74, $1.59, $1.88, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 647:
+  Cene: $5.74, $1.88, $0.57, $1.59
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 648:
+  Cene: $5.74, $1.88, $1.59, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 649:
+  Cene: $5.75, $0.71, $1.06, $2.26
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 650:
+  Cene: $5.75, $0.71, $2.26, $1.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 651:
+  Cene: $5.75, $1.06, $0.71, $2.26
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 652:
+  Cene: $5.75, $1.06, $2.26, $0.71
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 653:
+  Cene: $5.75, $2.26, $0.71, $1.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 654:
+  Cene: $5.75, $2.26, $1.06, $0.71
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 655:
+  Cene: $5.79, $0.68, $1.15, $2.16
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 656:
+  Cene: $5.79, $0.68, $2.16, $1.15
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 657:
+  Cene: $5.79, $1.15, $0.68, $2.16
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 658:
+  Cene: $5.79, $1.15, $2.16, $0.68
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 659:
+  Cene: $5.79, $2.16, $0.68, $1.15
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 660:
+  Cene: $5.79, $2.16, $1.15, $0.68
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 661:
+  Cene: $5.82, $0.66, $1.23, $2.07
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 662:
+  Cene: $5.82, $0.66, $2.07, $1.23
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 663:
+  Cene: $5.82, $1.23, $0.66, $2.07
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 664:
+  Cene: $5.82, $1.23, $2.07, $0.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 665:
+  Cene: $5.82, $2.07, $0.66, $1.23
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 666:
+  Cene: $5.82, $2.07, $1.23, $0.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 667:
+  Cene: $5.86, $0.65, $1.31, $1.96
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 668:
+  Cene: $5.86, $0.65, $1.96, $1.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 669:
+  Cene: $5.86, $1.31, $0.65, $1.96
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 670:
+  Cene: $5.86, $1.31, $1.96, $0.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 671:
+  Cene: $5.86, $1.96, $0.65, $1.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 672:
+  Cene: $5.86, $1.96, $1.31, $0.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 673:
+  Cene: $5.94, $0.65, $1.49, $1.70
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 674:
+  Cene: $5.94, $0.65, $1.70, $1.49
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 675:
+  Cene: $5.94, $1.49, $0.65, $1.70
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 676:
+  Cene: $5.94, $1.49, $1.70, $0.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 677:
+  Cene: $5.94, $1.70, $0.65, $1.49
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 678:
+  Cene: $5.94, $1.70, $1.49, $0.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 679:
+  Cene: $6.04, $0.80, $1.10, $1.84
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 680:
+  Cene: $6.04, $0.80, $1.84, $1.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 681:
+  Cene: $6.04, $1.10, $0.80, $1.84
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 682:
+  Cene: $6.04, $1.10, $1.84, $0.80
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 683:
+  Cene: $6.04, $1.84, $0.80, $1.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 684:
+  Cene: $6.04, $1.84, $1.10, $0.80
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 685:
+  Cene: $6.13, $0.77, $1.40, $1.48
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 686:
+  Cene: $6.13, $0.77, $1.48, $1.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 687:
+  Cene: $6.13, $1.40, $0.77, $1.48
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 688:
+  Cene: $6.13, $1.40, $1.48, $0.77
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 689:
+  Cene: $6.13, $1.48, $0.77, $1.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 690:
+  Cene: $6.13, $1.48, $1.40, $0.77
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 691:
+  Cene: $6.24, $0.95, $1.13, $1.46
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 692:
+  Cene: $6.24, $0.95, $1.46, $1.13
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 693:
+  Cene: $6.24, $1.13, $0.95, $1.46
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 694:
+  Cene: $6.24, $1.13, $1.46, $0.95
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 695:
+  Cene: $6.24, $1.46, $0.95, $1.13
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 696:
+  Cene: $6.24, $1.46, $1.13, $0.95
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+========================================
+(b) METOD SA 3 CENE - REDUKOVAN PROSTOR
+========================================
+
+Teorijski maksimalan broj poziva: 978^3 = 935,441,352
+Stvarni broj poziva: 935441352
+Vreme izvrsavanja: 3.24 sekundi
+                   ≈ 0.05 minuta
+                   ≈ 0.00 sati
+
+PRONADJENA RESENJA - METOD (b)
+========================================
+
+Ukupan broj resenja: 696
+
+Resenje 1:
+  Cene: $0.32, $2.60, $3.33, $3.53
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 2:
+  Cene: $0.32, $2.60, $3.53, $3.33
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 3:
+  Cene: $0.32, $3.33, $2.60, $3.53
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 4:
+  Cene: $0.32, $3.33, $3.53, $2.60
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 5:
+  Cene: $0.32, $3.53, $2.60, $3.33
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 6:
+  Cene: $0.32, $3.53, $3.33, $2.60
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 7:
+  Cene: $0.34, $2.27, $3.16, $4.01
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 8:
+  Cene: $0.34, $2.27, $4.01, $3.16
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 9:
+  Cene: $0.34, $3.16, $2.27, $4.01
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 10:
+  Cene: $0.34, $3.16, $4.01, $2.27
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 11:
+  Cene: $0.34, $4.01, $2.27, $3.16
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 12:
+  Cene: $0.34, $4.01, $3.16, $2.27
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 13:
+  Cene: $0.35, $2.10, $3.31, $4.02
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 14:
+  Cene: $0.35, $2.10, $4.02, $3.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 15:
+  Cene: $0.35, $3.31, $2.10, $4.02
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 16:
+  Cene: $0.35, $3.31, $4.02, $2.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 17:
+  Cene: $0.35, $4.02, $2.10, $3.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 18:
+  Cene: $0.35, $4.02, $3.31, $2.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 19:
+  Cene: $0.37, $1.89, $3.37, $4.15
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 20:
+  Cene: $0.37, $1.89, $4.15, $3.37
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 21:
+  Cene: $0.37, $3.37, $1.89, $4.15
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 22:
+  Cene: $0.37, $3.37, $4.15, $1.89
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 23:
+  Cene: $0.37, $4.15, $1.89, $3.37
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 24:
+  Cene: $0.37, $4.15, $3.37, $1.89
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 25:
+  Cene: $0.38, $2.23, $2.44, $4.73
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 26:
+  Cene: $0.38, $2.23, $4.73, $2.44
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 27:
+  Cene: $0.38, $2.44, $2.23, $4.73
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 28:
+  Cene: $0.38, $2.44, $4.73, $2.23
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 29:
+  Cene: $0.38, $4.73, $2.23, $2.44
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 30:
+  Cene: $0.38, $4.73, $2.44, $2.23
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 31:
+  Cene: $0.40, $1.63, $3.75, $4.00
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 32:
+  Cene: $0.40, $1.63, $4.00, $3.75
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 33:
+  Cene: $0.40, $1.76, $3.02, $4.60
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 34:
+  Cene: $0.40, $1.76, $4.60, $3.02
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 35:
+  Cene: $0.40, $2.11, $2.36, $4.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 36:
+  Cene: $0.40, $2.11, $4.91, $2.36
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 37:
+  Cene: $0.40, $2.36, $2.11, $4.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 38:
+  Cene: $0.40, $2.36, $4.91, $2.11
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 39:
+  Cene: $0.40, $3.02, $1.76, $4.60
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 40:
+  Cene: $0.40, $3.02, $4.60, $1.76
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 41:
+  Cene: $0.40, $3.75, $1.63, $4.00
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 42:
+  Cene: $0.40, $3.75, $4.00, $1.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 43:
+  Cene: $0.40, $4.00, $1.63, $3.75
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 44:
+  Cene: $0.40, $4.00, $3.75, $1.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 45:
+  Cene: $0.40, $4.60, $1.76, $3.02
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 46:
+  Cene: $0.40, $4.60, $3.02, $1.76
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 47:
+  Cene: $0.40, $4.91, $2.11, $2.36
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 48:
+  Cene: $0.40, $4.91, $2.36, $2.11
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 49:
+  Cene: $0.43, $1.53, $3.26, $4.56
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 50:
+  Cene: $0.43, $1.53, $4.56, $3.26
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 51:
+  Cene: $0.43, $3.26, $1.53, $4.56
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 52:
+  Cene: $0.43, $3.26, $4.56, $1.53
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 53:
+  Cene: $0.43, $4.56, $1.53, $3.26
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 54:
+  Cene: $0.43, $4.56, $3.26, $1.53
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 55:
+  Cene: $0.46, $1.94, $2.06, $5.32
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 56:
+  Cene: $0.46, $1.94, $5.32, $2.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 57:
+  Cene: $0.46, $2.06, $1.94, $5.32
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 58:
+  Cene: $0.46, $2.06, $5.32, $1.94
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 59:
+  Cene: $0.46, $5.32, $1.94, $2.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 60:
+  Cene: $0.46, $5.32, $2.06, $1.94
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 61:
+  Cene: $0.47, $1.31, $3.66, $4.34
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 62:
+  Cene: $0.47, $1.31, $4.34, $3.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 63:
+  Cene: $0.47, $3.66, $1.31, $4.34
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 64:
+  Cene: $0.47, $3.66, $4.34, $1.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 65:
+  Cene: $0.47, $4.34, $1.31, $3.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 66:
+  Cene: $0.47, $4.34, $3.66, $1.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 67:
+  Cene: $0.57, $1.04, $3.65, $4.52
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 68:
+  Cene: $0.57, $1.04, $4.52, $3.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 69:
+  Cene: $0.57, $1.51, $1.99, $5.71
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 70:
+  Cene: $0.57, $1.51, $5.71, $1.99
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 71:
+  Cene: $0.57, $1.59, $1.88, $5.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 72:
+  Cene: $0.57, $1.59, $5.74, $1.88
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 73:
+  Cene: $0.57, $1.88, $1.59, $5.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 74:
+  Cene: $0.57, $1.88, $5.74, $1.59
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 75:
+  Cene: $0.57, $1.99, $1.51, $5.71
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 76:
+  Cene: $0.57, $1.99, $5.71, $1.51
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 77:
+  Cene: $0.57, $3.65, $1.04, $4.52
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 78:
+  Cene: $0.57, $3.65, $4.52, $1.04
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 79:
+  Cene: $0.57, $4.52, $1.04, $3.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 80:
+  Cene: $0.57, $4.52, $3.65, $1.04
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 81:
+  Cene: $0.57, $5.71, $1.51, $1.99
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 82:
+  Cene: $0.57, $5.71, $1.99, $1.51
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 83:
+  Cene: $0.57, $5.74, $1.59, $1.88
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 84:
+  Cene: $0.57, $5.74, $1.88, $1.59
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 85:
+  Cene: $0.63, $1.10, $2.58, $5.47
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 86:
+  Cene: $0.63, $1.10, $5.47, $2.58
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 87:
+  Cene: $0.63, $2.58, $1.10, $5.47
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 88:
+  Cene: $0.63, $2.58, $5.47, $1.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 89:
+  Cene: $0.63, $5.47, $1.10, $2.58
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 90:
+  Cene: $0.63, $5.47, $2.58, $1.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 91:
+  Cene: $0.64, $0.91, $3.74, $4.49
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 92:
+  Cene: $0.64, $0.91, $4.49, $3.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 93:
+  Cene: $0.64, $0.96, $3.19, $4.99
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 94:
+  Cene: $0.64, $0.96, $4.99, $3.19
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 95:
+  Cene: $0.64, $3.19, $0.96, $4.99
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 96:
+  Cene: $0.64, $3.19, $4.99, $0.96
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 97:
+  Cene: $0.64, $3.74, $0.91, $4.49
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 98:
+  Cene: $0.64, $3.74, $4.49, $0.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 99:
+  Cene: $0.64, $4.49, $0.91, $3.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 100:
+  Cene: $0.64, $4.49, $3.74, $0.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 101:
+  Cene: $0.64, $4.99, $0.96, $3.19
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 102:
+  Cene: $0.64, $4.99, $3.19, $0.96
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 103:
+  Cene: $0.65, $1.31, $1.96, $5.86
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 104:
+  Cene: $0.65, $1.31, $5.86, $1.96
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 105:
+  Cene: $0.65, $1.49, $1.70, $5.94
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 106:
+  Cene: $0.65, $1.49, $5.94, $1.70
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 107:
+  Cene: $0.65, $1.70, $1.49, $5.94
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 108:
+  Cene: $0.65, $1.70, $5.94, $1.49
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 109:
+  Cene: $0.65, $1.96, $1.31, $5.86
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 110:
+  Cene: $0.65, $1.96, $5.86, $1.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 111:
+  Cene: $0.65, $5.86, $1.31, $1.96
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 112:
+  Cene: $0.65, $5.86, $1.96, $1.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 113:
+  Cene: $0.65, $5.94, $1.49, $1.70
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 114:
+  Cene: $0.65, $5.94, $1.70, $1.49
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 115:
+  Cene: $0.66, $1.23, $2.07, $5.82
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 116:
+  Cene: $0.66, $1.23, $5.82, $2.07
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 117:
+  Cene: $0.66, $2.07, $1.23, $5.82
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 118:
+  Cene: $0.66, $2.07, $5.82, $1.23
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 119:
+  Cene: $0.66, $5.82, $1.23, $2.07
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 120:
+  Cene: $0.66, $5.82, $2.07, $1.23
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 121:
+  Cene: $0.67, $0.90, $3.31, $4.90
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 122:
+  Cene: $0.67, $0.90, $4.90, $3.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 123:
+  Cene: $0.67, $3.31, $0.90, $4.90
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 124:
+  Cene: $0.67, $3.31, $4.90, $0.90
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 125:
+  Cene: $0.67, $4.90, $0.90, $3.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 126:
+  Cene: $0.67, $4.90, $3.31, $0.90
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 127:
+  Cene: $0.68, $1.06, $2.41, $5.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 128:
+  Cene: $0.68, $1.06, $5.63, $2.41
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 129:
+  Cene: $0.68, $1.15, $2.16, $5.79
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 130:
+  Cene: $0.68, $1.15, $5.79, $2.16
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 131:
+  Cene: $0.68, $2.16, $1.15, $5.79
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 132:
+  Cene: $0.68, $2.16, $5.79, $1.15
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 133:
+  Cene: $0.68, $2.41, $1.06, $5.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 134:
+  Cene: $0.68, $2.41, $5.63, $1.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 135:
+  Cene: $0.68, $5.63, $1.06, $2.41
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 136:
+  Cene: $0.68, $5.63, $2.41, $1.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 137:
+  Cene: $0.68, $5.79, $1.15, $2.16
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 138:
+  Cene: $0.68, $5.79, $2.16, $1.15
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 139:
+  Cene: $0.70, $0.91, $2.93, $5.24
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 140:
+  Cene: $0.70, $0.91, $5.24, $2.93
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 141:
+  Cene: $0.70, $2.93, $0.91, $5.24
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 142:
+  Cene: $0.70, $2.93, $5.24, $0.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 143:
+  Cene: $0.70, $5.24, $0.91, $2.93
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 144:
+  Cene: $0.70, $5.24, $2.93, $0.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 145:
+  Cene: $0.71, $1.06, $2.26, $5.75
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 146:
+  Cene: $0.71, $1.06, $5.75, $2.26
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 147:
+  Cene: $0.71, $2.26, $1.06, $5.75
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 148:
+  Cene: $0.71, $2.26, $5.75, $1.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 149:
+  Cene: $0.71, $5.75, $1.06, $2.26
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 150:
+  Cene: $0.71, $5.75, $2.26, $1.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 151:
+  Cene: $0.74, $0.79, $3.59, $4.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 152:
+  Cene: $0.74, $0.79, $4.66, $3.59
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 153:
+  Cene: $0.74, $3.59, $0.79, $4.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 154:
+  Cene: $0.74, $3.59, $4.66, $0.79
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 155:
+  Cene: $0.74, $4.66, $0.79, $3.59
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 156:
+  Cene: $0.74, $4.66, $3.59, $0.79
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 157:
+  Cene: $0.77, $1.40, $1.48, $6.13
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 158:
+  Cene: $0.77, $1.40, $6.13, $1.48
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 159:
+  Cene: $0.77, $1.48, $1.40, $6.13
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 160:
+  Cene: $0.77, $1.48, $6.13, $1.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 161:
+  Cene: $0.77, $6.13, $1.40, $1.48
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 162:
+  Cene: $0.77, $6.13, $1.48, $1.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 163:
+  Cene: $0.79, $0.74, $3.59, $4.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 164:
+  Cene: $0.79, $0.74, $4.66, $3.59
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 165:
+  Cene: $0.79, $3.59, $0.74, $4.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 166:
+  Cene: $0.79, $3.59, $4.66, $0.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 167:
+  Cene: $0.79, $4.66, $0.74, $3.59
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 168:
+  Cene: $0.79, $4.66, $3.59, $0.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 169:
+  Cene: $0.80, $1.10, $1.84, $6.04
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 170:
+  Cene: $0.80, $1.10, $6.04, $1.84
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 171:
+  Cene: $0.80, $1.84, $1.10, $6.04
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 172:
+  Cene: $0.80, $1.84, $6.04, $1.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 173:
+  Cene: $0.80, $6.04, $1.10, $1.84
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 174:
+  Cene: $0.80, $6.04, $1.84, $1.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 175:
+  Cene: $0.90, $0.67, $3.31, $4.90
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 176:
+  Cene: $0.90, $0.67, $4.90, $3.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 177:
+  Cene: $0.90, $3.31, $0.67, $4.90
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 178:
+  Cene: $0.90, $3.31, $4.90, $0.67
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 179:
+  Cene: $0.90, $4.90, $0.67, $3.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 180:
+  Cene: $0.90, $4.90, $3.31, $0.67
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 181:
+  Cene: $0.91, $0.64, $3.74, $4.49
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 182:
+  Cene: $0.91, $0.64, $4.49, $3.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 183:
+  Cene: $0.91, $0.70, $2.93, $5.24
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 184:
+  Cene: $0.91, $0.70, $5.24, $2.93
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 185:
+  Cene: $0.91, $2.93, $0.70, $5.24
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 186:
+  Cene: $0.91, $2.93, $5.24, $0.70
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 187:
+  Cene: $0.91, $3.74, $0.64, $4.49
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 188:
+  Cene: $0.91, $3.74, $4.49, $0.64
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 189:
+  Cene: $0.91, $4.49, $0.64, $3.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 190:
+  Cene: $0.91, $4.49, $3.74, $0.64
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 191:
+  Cene: $0.91, $5.24, $0.70, $2.93
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 192:
+  Cene: $0.91, $5.24, $2.93, $0.70
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 193:
+  Cene: $0.95, $1.13, $1.46, $6.24
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 194:
+  Cene: $0.95, $1.13, $6.24, $1.46
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 195:
+  Cene: $0.95, $1.46, $1.13, $6.24
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 196:
+  Cene: $0.95, $1.46, $6.24, $1.13
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 197:
+  Cene: $0.95, $6.24, $1.13, $1.46
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 198:
+  Cene: $0.95, $6.24, $1.46, $1.13
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 199:
+  Cene: $0.96, $0.64, $3.19, $4.99
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 200:
+  Cene: $0.96, $0.64, $4.99, $3.19
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 201:
+  Cene: $0.96, $3.19, $0.64, $4.99
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 202:
+  Cene: $0.96, $3.19, $4.99, $0.64
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 203:
+  Cene: $0.96, $4.99, $0.64, $3.19
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 204:
+  Cene: $0.96, $4.99, $3.19, $0.64
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 205:
+  Cene: $1.04, $0.57, $3.65, $4.52
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 206:
+  Cene: $1.04, $0.57, $4.52, $3.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 207:
+  Cene: $1.04, $3.65, $0.57, $4.52
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 208:
+  Cene: $1.04, $3.65, $4.52, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 209:
+  Cene: $1.04, $4.52, $0.57, $3.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 210:
+  Cene: $1.04, $4.52, $3.65, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 211:
+  Cene: $1.06, $0.68, $2.41, $5.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 212:
+  Cene: $1.06, $0.68, $5.63, $2.41
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 213:
+  Cene: $1.06, $0.71, $2.26, $5.75
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 214:
+  Cene: $1.06, $0.71, $5.75, $2.26
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 215:
+  Cene: $1.06, $2.26, $0.71, $5.75
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 216:
+  Cene: $1.06, $2.26, $5.75, $0.71
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 217:
+  Cene: $1.06, $2.41, $0.68, $5.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 218:
+  Cene: $1.06, $2.41, $5.63, $0.68
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 219:
+  Cene: $1.06, $5.63, $0.68, $2.41
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 220:
+  Cene: $1.06, $5.63, $2.41, $0.68
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 221:
+  Cene: $1.06, $5.75, $0.71, $2.26
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 222:
+  Cene: $1.06, $5.75, $2.26, $0.71
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 223:
+  Cene: $1.10, $0.63, $2.58, $5.47
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 224:
+  Cene: $1.10, $0.63, $5.47, $2.58
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 225:
+  Cene: $1.10, $0.80, $1.84, $6.04
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 226:
+  Cene: $1.10, $0.80, $6.04, $1.84
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 227:
+  Cene: $1.10, $1.84, $0.80, $6.04
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 228:
+  Cene: $1.10, $1.84, $6.04, $0.80
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 229:
+  Cene: $1.10, $2.58, $0.63, $5.47
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 230:
+  Cene: $1.10, $2.58, $5.47, $0.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 231:
+  Cene: $1.10, $5.47, $0.63, $2.58
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 232:
+  Cene: $1.10, $5.47, $2.58, $0.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 233:
+  Cene: $1.10, $6.04, $0.80, $1.84
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 234:
+  Cene: $1.10, $6.04, $1.84, $0.80
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 235:
+  Cene: $1.13, $0.95, $1.46, $6.24
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 236:
+  Cene: $1.13, $0.95, $6.24, $1.46
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 237:
+  Cene: $1.13, $1.46, $0.95, $6.24
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 238:
+  Cene: $1.13, $1.46, $6.24, $0.95
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 239:
+  Cene: $1.13, $6.24, $0.95, $1.46
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 240:
+  Cene: $1.13, $6.24, $1.46, $0.95
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 241:
+  Cene: $1.15, $0.68, $2.16, $5.79
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 242:
+  Cene: $1.15, $0.68, $5.79, $2.16
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 243:
+  Cene: $1.15, $2.16, $0.68, $5.79
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 244:
+  Cene: $1.15, $2.16, $5.79, $0.68
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 245:
+  Cene: $1.15, $5.79, $0.68, $2.16
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 246:
+  Cene: $1.15, $5.79, $2.16, $0.68
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 247:
+  Cene: $1.23, $0.66, $2.07, $5.82
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 248:
+  Cene: $1.23, $0.66, $5.82, $2.07
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 249:
+  Cene: $1.23, $2.07, $0.66, $5.82
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 250:
+  Cene: $1.23, $2.07, $5.82, $0.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 251:
+  Cene: $1.23, $5.82, $0.66, $2.07
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 252:
+  Cene: $1.23, $5.82, $2.07, $0.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 253:
+  Cene: $1.31, $0.47, $3.66, $4.34
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 254:
+  Cene: $1.31, $0.47, $4.34, $3.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 255:
+  Cene: $1.31, $0.65, $1.96, $5.86
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 256:
+  Cene: $1.31, $0.65, $5.86, $1.96
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 257:
+  Cene: $1.31, $1.96, $0.65, $5.86
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 258:
+  Cene: $1.31, $1.96, $5.86, $0.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 259:
+  Cene: $1.31, $3.66, $0.47, $4.34
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 260:
+  Cene: $1.31, $3.66, $4.34, $0.47
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 261:
+  Cene: $1.31, $4.34, $0.47, $3.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 262:
+  Cene: $1.31, $4.34, $3.66, $0.47
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 263:
+  Cene: $1.31, $5.86, $0.65, $1.96
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 264:
+  Cene: $1.31, $5.86, $1.96, $0.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 265:
+  Cene: $1.40, $0.77, $1.48, $6.13
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 266:
+  Cene: $1.40, $0.77, $6.13, $1.48
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 267:
+  Cene: $1.40, $1.48, $0.77, $6.13
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 268:
+  Cene: $1.40, $1.48, $6.13, $0.77
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 269:
+  Cene: $1.40, $6.13, $0.77, $1.48
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 270:
+  Cene: $1.40, $6.13, $1.48, $0.77
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 271:
+  Cene: $1.46, $0.95, $1.13, $6.24
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 272:
+  Cene: $1.46, $0.95, $6.24, $1.13
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 273:
+  Cene: $1.46, $1.13, $0.95, $6.24
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 274:
+  Cene: $1.46, $1.13, $6.24, $0.95
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 275:
+  Cene: $1.46, $6.24, $0.95, $1.13
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 276:
+  Cene: $1.46, $6.24, $1.13, $0.95
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 277:
+  Cene: $1.48, $0.77, $1.40, $6.13
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 278:
+  Cene: $1.48, $0.77, $6.13, $1.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 279:
+  Cene: $1.48, $1.40, $0.77, $6.13
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 280:
+  Cene: $1.48, $1.40, $6.13, $0.77
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 281:
+  Cene: $1.48, $6.13, $0.77, $1.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 282:
+  Cene: $1.48, $6.13, $1.40, $0.77
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 283:
+  Cene: $1.49, $0.65, $1.70, $5.94
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 284:
+  Cene: $1.49, $0.65, $5.94, $1.70
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 285:
+  Cene: $1.49, $1.70, $0.65, $5.94
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 286:
+  Cene: $1.49, $1.70, $5.94, $0.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 287:
+  Cene: $1.49, $5.94, $0.65, $1.70
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 288:
+  Cene: $1.49, $5.94, $1.70, $0.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 289:
+  Cene: $1.51, $0.57, $1.99, $5.71
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 290:
+  Cene: $1.51, $0.57, $5.71, $1.99
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 291:
+  Cene: $1.51, $1.99, $0.57, $5.71
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 292:
+  Cene: $1.51, $1.99, $5.71, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 293:
+  Cene: $1.51, $5.71, $0.57, $1.99
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 294:
+  Cene: $1.51, $5.71, $1.99, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 295:
+  Cene: $1.53, $0.43, $3.26, $4.56
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 296:
+  Cene: $1.53, $0.43, $4.56, $3.26
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 297:
+  Cene: $1.53, $3.26, $0.43, $4.56
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 298:
+  Cene: $1.53, $3.26, $4.56, $0.43
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 299:
+  Cene: $1.53, $4.56, $0.43, $3.26
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 300:
+  Cene: $1.53, $4.56, $3.26, $0.43
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 301:
+  Cene: $1.59, $0.57, $1.88, $5.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 302:
+  Cene: $1.59, $0.57, $5.74, $1.88
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 303:
+  Cene: $1.59, $1.88, $0.57, $5.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 304:
+  Cene: $1.59, $1.88, $5.74, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 305:
+  Cene: $1.59, $5.74, $0.57, $1.88
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 306:
+  Cene: $1.59, $5.74, $1.88, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 307:
+  Cene: $1.63, $0.40, $3.75, $4.00
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 308:
+  Cene: $1.63, $0.40, $4.00, $3.75
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 309:
+  Cene: $1.63, $3.75, $0.40, $4.00
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 310:
+  Cene: $1.63, $3.75, $4.00, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 311:
+  Cene: $1.63, $4.00, $0.40, $3.75
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 312:
+  Cene: $1.63, $4.00, $3.75, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 313:
+  Cene: $1.70, $0.65, $1.49, $5.94
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 314:
+  Cene: $1.70, $0.65, $5.94, $1.49
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 315:
+  Cene: $1.70, $1.49, $0.65, $5.94
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 316:
+  Cene: $1.70, $1.49, $5.94, $0.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 317:
+  Cene: $1.70, $5.94, $0.65, $1.49
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 318:
+  Cene: $1.70, $5.94, $1.49, $0.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 319:
+  Cene: $1.76, $0.40, $3.02, $4.60
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 320:
+  Cene: $1.76, $0.40, $4.60, $3.02
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 321:
+  Cene: $1.76, $3.02, $0.40, $4.60
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 322:
+  Cene: $1.76, $3.02, $4.60, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 323:
+  Cene: $1.76, $4.60, $0.40, $3.02
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 324:
+  Cene: $1.76, $4.60, $3.02, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 325:
+  Cene: $1.84, $0.80, $1.10, $6.04
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 326:
+  Cene: $1.84, $0.80, $6.04, $1.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 327:
+  Cene: $1.84, $1.10, $0.80, $6.04
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 328:
+  Cene: $1.84, $1.10, $6.04, $0.80
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 329:
+  Cene: $1.84, $6.04, $0.80, $1.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 330:
+  Cene: $1.84, $6.04, $1.10, $0.80
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 331:
+  Cene: $1.88, $0.57, $1.59, $5.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 332:
+  Cene: $1.88, $0.57, $5.74, $1.59
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 333:
+  Cene: $1.88, $1.59, $0.57, $5.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 334:
+  Cene: $1.88, $1.59, $5.74, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 335:
+  Cene: $1.88, $5.74, $0.57, $1.59
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 336:
+  Cene: $1.88, $5.74, $1.59, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 337:
+  Cene: $1.89, $0.37, $3.37, $4.15
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 338:
+  Cene: $1.89, $0.37, $4.15, $3.37
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 339:
+  Cene: $1.89, $3.37, $0.37, $4.15
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 340:
+  Cene: $1.89, $3.37, $4.15, $0.37
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 341:
+  Cene: $1.89, $4.15, $0.37, $3.37
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 342:
+  Cene: $1.89, $4.15, $3.37, $0.37
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 343:
+  Cene: $1.94, $0.46, $2.06, $5.32
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 344:
+  Cene: $1.94, $0.46, $5.32, $2.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 345:
+  Cene: $1.94, $2.06, $0.46, $5.32
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 346:
+  Cene: $1.94, $2.06, $5.32, $0.46
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 347:
+  Cene: $1.94, $5.32, $0.46, $2.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 348:
+  Cene: $1.94, $5.32, $2.06, $0.46
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 349:
+  Cene: $1.96, $0.65, $1.31, $5.86
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 350:
+  Cene: $1.96, $0.65, $5.86, $1.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 351:
+  Cene: $1.96, $1.31, $0.65, $5.86
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 352:
+  Cene: $1.96, $1.31, $5.86, $0.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 353:
+  Cene: $1.96, $5.86, $0.65, $1.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 354:
+  Cene: $1.96, $5.86, $1.31, $0.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 355:
+  Cene: $1.99, $0.57, $1.51, $5.71
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 356:
+  Cene: $1.99, $0.57, $5.71, $1.51
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 357:
+  Cene: $1.99, $1.51, $0.57, $5.71
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 358:
+  Cene: $1.99, $1.51, $5.71, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 359:
+  Cene: $1.99, $5.71, $0.57, $1.51
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 360:
+  Cene: $1.99, $5.71, $1.51, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 361:
+  Cene: $2.06, $0.46, $1.94, $5.32
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 362:
+  Cene: $2.06, $0.46, $5.32, $1.94
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 363:
+  Cene: $2.06, $1.94, $0.46, $5.32
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 364:
+  Cene: $2.06, $1.94, $5.32, $0.46
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 365:
+  Cene: $2.06, $5.32, $0.46, $1.94
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 366:
+  Cene: $2.06, $5.32, $1.94, $0.46
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 367:
+  Cene: $2.07, $0.66, $1.23, $5.82
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 368:
+  Cene: $2.07, $0.66, $5.82, $1.23
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 369:
+  Cene: $2.07, $1.23, $0.66, $5.82
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 370:
+  Cene: $2.07, $1.23, $5.82, $0.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 371:
+  Cene: $2.07, $5.82, $0.66, $1.23
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 372:
+  Cene: $2.07, $5.82, $1.23, $0.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 373:
+  Cene: $2.10, $0.35, $3.31, $4.02
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 374:
+  Cene: $2.10, $0.35, $4.02, $3.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 375:
+  Cene: $2.10, $3.31, $0.35, $4.02
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 376:
+  Cene: $2.10, $3.31, $4.02, $0.35
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 377:
+  Cene: $2.10, $4.02, $0.35, $3.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 378:
+  Cene: $2.10, $4.02, $3.31, $0.35
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 379:
+  Cene: $2.11, $0.40, $2.36, $4.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 380:
+  Cene: $2.11, $0.40, $4.91, $2.36
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 381:
+  Cene: $2.11, $2.36, $0.40, $4.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 382:
+  Cene: $2.11, $2.36, $4.91, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 383:
+  Cene: $2.11, $4.91, $0.40, $2.36
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 384:
+  Cene: $2.11, $4.91, $2.36, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 385:
+  Cene: $2.16, $0.68, $1.15, $5.79
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 386:
+  Cene: $2.16, $0.68, $5.79, $1.15
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 387:
+  Cene: $2.16, $1.15, $0.68, $5.79
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 388:
+  Cene: $2.16, $1.15, $5.79, $0.68
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 389:
+  Cene: $2.16, $5.79, $0.68, $1.15
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 390:
+  Cene: $2.16, $5.79, $1.15, $0.68
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 391:
+  Cene: $2.23, $0.38, $2.44, $4.73
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 392:
+  Cene: $2.23, $0.38, $4.73, $2.44
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 393:
+  Cene: $2.23, $2.44, $0.38, $4.73
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 394:
+  Cene: $2.23, $2.44, $4.73, $0.38
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 395:
+  Cene: $2.23, $4.73, $0.38, $2.44
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 396:
+  Cene: $2.23, $4.73, $2.44, $0.38
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 397:
+  Cene: $2.26, $0.71, $1.06, $5.75
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 398:
+  Cene: $2.26, $0.71, $5.75, $1.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 399:
+  Cene: $2.26, $1.06, $0.71, $5.75
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 400:
+  Cene: $2.26, $1.06, $5.75, $0.71
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 401:
+  Cene: $2.26, $5.75, $0.71, $1.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 402:
+  Cene: $2.26, $5.75, $1.06, $0.71
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 403:
+  Cene: $2.27, $0.34, $3.16, $4.01
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 404:
+  Cene: $2.27, $0.34, $4.01, $3.16
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 405:
+  Cene: $2.27, $3.16, $0.34, $4.01
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 406:
+  Cene: $2.27, $3.16, $4.01, $0.34
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 407:
+  Cene: $2.27, $4.01, $0.34, $3.16
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 408:
+  Cene: $2.27, $4.01, $3.16, $0.34
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 409:
+  Cene: $2.36, $0.40, $2.11, $4.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 410:
+  Cene: $2.36, $0.40, $4.91, $2.11
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 411:
+  Cene: $2.36, $2.11, $0.40, $4.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 412:
+  Cene: $2.36, $2.11, $4.91, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 413:
+  Cene: $2.36, $4.91, $0.40, $2.11
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 414:
+  Cene: $2.36, $4.91, $2.11, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 415:
+  Cene: $2.41, $0.68, $1.06, $5.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 416:
+  Cene: $2.41, $0.68, $5.63, $1.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 417:
+  Cene: $2.41, $1.06, $0.68, $5.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 418:
+  Cene: $2.41, $1.06, $5.63, $0.68
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 419:
+  Cene: $2.41, $5.63, $0.68, $1.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 420:
+  Cene: $2.41, $5.63, $1.06, $0.68
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 421:
+  Cene: $2.44, $0.38, $2.23, $4.73
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 422:
+  Cene: $2.44, $0.38, $4.73, $2.23
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 423:
+  Cene: $2.44, $2.23, $0.38, $4.73
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 424:
+  Cene: $2.44, $2.23, $4.73, $0.38
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 425:
+  Cene: $2.44, $4.73, $0.38, $2.23
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 426:
+  Cene: $2.44, $4.73, $2.23, $0.38
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 427:
+  Cene: $2.58, $0.63, $1.10, $5.47
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 428:
+  Cene: $2.58, $0.63, $5.47, $1.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 429:
+  Cene: $2.58, $1.10, $0.63, $5.47
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 430:
+  Cene: $2.58, $1.10, $5.47, $0.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 431:
+  Cene: $2.58, $5.47, $0.63, $1.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 432:
+  Cene: $2.58, $5.47, $1.10, $0.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 433:
+  Cene: $2.60, $0.32, $3.33, $3.53
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 434:
+  Cene: $2.60, $0.32, $3.53, $3.33
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 435:
+  Cene: $2.60, $3.33, $0.32, $3.53
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 436:
+  Cene: $2.60, $3.33, $3.53, $0.32
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 437:
+  Cene: $2.60, $3.53, $0.32, $3.33
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 438:
+  Cene: $2.60, $3.53, $3.33, $0.32
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 439:
+  Cene: $2.93, $0.70, $0.91, $5.24
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 440:
+  Cene: $2.93, $0.70, $5.24, $0.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 441:
+  Cene: $2.93, $0.91, $0.70, $5.24
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 442:
+  Cene: $2.93, $0.91, $5.24, $0.70
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 443:
+  Cene: $2.93, $5.24, $0.70, $0.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 444:
+  Cene: $2.93, $5.24, $0.91, $0.70
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 445:
+  Cene: $3.02, $0.40, $1.76, $4.60
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 446:
+  Cene: $3.02, $0.40, $4.60, $1.76
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 447:
+  Cene: $3.02, $1.76, $0.40, $4.60
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 448:
+  Cene: $3.02, $1.76, $4.60, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 449:
+  Cene: $3.02, $4.60, $0.40, $1.76
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 450:
+  Cene: $3.02, $4.60, $1.76, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 451:
+  Cene: $3.16, $0.34, $2.27, $4.01
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 452:
+  Cene: $3.16, $0.34, $4.01, $2.27
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 453:
+  Cene: $3.16, $2.27, $0.34, $4.01
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 454:
+  Cene: $3.16, $2.27, $4.01, $0.34
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 455:
+  Cene: $3.16, $4.01, $0.34, $2.27
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 456:
+  Cene: $3.16, $4.01, $2.27, $0.34
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 457:
+  Cene: $3.19, $0.64, $0.96, $4.99
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 458:
+  Cene: $3.19, $0.64, $4.99, $0.96
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 459:
+  Cene: $3.19, $0.96, $0.64, $4.99
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 460:
+  Cene: $3.19, $0.96, $4.99, $0.64
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 461:
+  Cene: $3.19, $4.99, $0.64, $0.96
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 462:
+  Cene: $3.19, $4.99, $0.96, $0.64
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 463:
+  Cene: $3.26, $0.43, $1.53, $4.56
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 464:
+  Cene: $3.26, $0.43, $4.56, $1.53
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 465:
+  Cene: $3.26, $1.53, $0.43, $4.56
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 466:
+  Cene: $3.26, $1.53, $4.56, $0.43
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 467:
+  Cene: $3.26, $4.56, $0.43, $1.53
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 468:
+  Cene: $3.26, $4.56, $1.53, $0.43
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 469:
+  Cene: $3.31, $0.35, $2.10, $4.02
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 470:
+  Cene: $3.31, $0.35, $4.02, $2.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 471:
+  Cene: $3.31, $0.67, $0.90, $4.90
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 472:
+  Cene: $3.31, $0.67, $4.90, $0.90
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 473:
+  Cene: $3.31, $0.90, $0.67, $4.90
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 474:
+  Cene: $3.31, $0.90, $4.90, $0.67
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 475:
+  Cene: $3.31, $2.10, $0.35, $4.02
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 476:
+  Cene: $3.31, $2.10, $4.02, $0.35
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 477:
+  Cene: $3.31, $4.02, $0.35, $2.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 478:
+  Cene: $3.31, $4.02, $2.10, $0.35
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 479:
+  Cene: $3.31, $4.90, $0.67, $0.90
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 480:
+  Cene: $3.31, $4.90, $0.90, $0.67
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 481:
+  Cene: $3.33, $0.32, $2.60, $3.53
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 482:
+  Cene: $3.33, $0.32, $3.53, $2.60
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 483:
+  Cene: $3.33, $2.60, $0.32, $3.53
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 484:
+  Cene: $3.33, $2.60, $3.53, $0.32
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 485:
+  Cene: $3.33, $3.53, $0.32, $2.60
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 486:
+  Cene: $3.33, $3.53, $2.60, $0.32
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 487:
+  Cene: $3.37, $0.37, $1.89, $4.15
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 488:
+  Cene: $3.37, $0.37, $4.15, $1.89
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 489:
+  Cene: $3.37, $1.89, $0.37, $4.15
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 490:
+  Cene: $3.37, $1.89, $4.15, $0.37
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 491:
+  Cene: $3.37, $4.15, $0.37, $1.89
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 492:
+  Cene: $3.37, $4.15, $1.89, $0.37
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 493:
+  Cene: $3.53, $0.32, $2.60, $3.33
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 494:
+  Cene: $3.53, $0.32, $3.33, $2.60
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 495:
+  Cene: $3.53, $2.60, $0.32, $3.33
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 496:
+  Cene: $3.53, $2.60, $3.33, $0.32
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 497:
+  Cene: $3.53, $3.33, $0.32, $2.60
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 498:
+  Cene: $3.53, $3.33, $2.60, $0.32
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 499:
+  Cene: $3.59, $0.74, $0.79, $4.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 500:
+  Cene: $3.59, $0.74, $4.66, $0.79
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 501:
+  Cene: $3.59, $0.79, $0.74, $4.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 502:
+  Cene: $3.59, $0.79, $4.66, $0.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 503:
+  Cene: $3.59, $4.66, $0.74, $0.79
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 504:
+  Cene: $3.59, $4.66, $0.79, $0.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 505:
+  Cene: $3.65, $0.57, $1.04, $4.52
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 506:
+  Cene: $3.65, $0.57, $4.52, $1.04
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 507:
+  Cene: $3.65, $1.04, $0.57, $4.52
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 508:
+  Cene: $3.65, $1.04, $4.52, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 509:
+  Cene: $3.65, $4.52, $0.57, $1.04
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 510:
+  Cene: $3.65, $4.52, $1.04, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 511:
+  Cene: $3.66, $0.47, $1.31, $4.34
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 512:
+  Cene: $3.66, $0.47, $4.34, $1.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 513:
+  Cene: $3.66, $1.31, $0.47, $4.34
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 514:
+  Cene: $3.66, $1.31, $4.34, $0.47
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 515:
+  Cene: $3.66, $4.34, $0.47, $1.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 516:
+  Cene: $3.66, $4.34, $1.31, $0.47
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 517:
+  Cene: $3.74, $0.64, $0.91, $4.49
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 518:
+  Cene: $3.74, $0.64, $4.49, $0.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 519:
+  Cene: $3.74, $0.91, $0.64, $4.49
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 520:
+  Cene: $3.74, $0.91, $4.49, $0.64
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 521:
+  Cene: $3.74, $4.49, $0.64, $0.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 522:
+  Cene: $3.74, $4.49, $0.91, $0.64
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 523:
+  Cene: $3.75, $0.40, $1.63, $4.00
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 524:
+  Cene: $3.75, $0.40, $4.00, $1.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 525:
+  Cene: $3.75, $1.63, $0.40, $4.00
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 526:
+  Cene: $3.75, $1.63, $4.00, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 527:
+  Cene: $3.75, $4.00, $0.40, $1.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 528:
+  Cene: $3.75, $4.00, $1.63, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 529:
+  Cene: $4.00, $0.40, $1.63, $3.75
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 530:
+  Cene: $4.00, $0.40, $3.75, $1.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 531:
+  Cene: $4.00, $1.63, $0.40, $3.75
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 532:
+  Cene: $4.00, $1.63, $3.75, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 533:
+  Cene: $4.00, $3.75, $0.40, $1.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 534:
+  Cene: $4.00, $3.75, $1.63, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 535:
+  Cene: $4.01, $0.34, $2.27, $3.16
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 536:
+  Cene: $4.01, $0.34, $3.16, $2.27
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 537:
+  Cene: $4.01, $2.27, $0.34, $3.16
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 538:
+  Cene: $4.01, $2.27, $3.16, $0.34
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 539:
+  Cene: $4.01, $3.16, $0.34, $2.27
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 540:
+  Cene: $4.01, $3.16, $2.27, $0.34
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 541:
+  Cene: $4.02, $0.35, $2.10, $3.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 542:
+  Cene: $4.02, $0.35, $3.31, $2.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 543:
+  Cene: $4.02, $2.10, $0.35, $3.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 544:
+  Cene: $4.02, $2.10, $3.31, $0.35
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 545:
+  Cene: $4.02, $3.31, $0.35, $2.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 546:
+  Cene: $4.02, $3.31, $2.10, $0.35
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 547:
+  Cene: $4.15, $0.37, $1.89, $3.37
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 548:
+  Cene: $4.15, $0.37, $3.37, $1.89
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 549:
+  Cene: $4.15, $1.89, $0.37, $3.37
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 550:
+  Cene: $4.15, $1.89, $3.37, $0.37
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 551:
+  Cene: $4.15, $3.37, $0.37, $1.89
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 552:
+  Cene: $4.15, $3.37, $1.89, $0.37
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 553:
+  Cene: $4.34, $0.47, $1.31, $3.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 554:
+  Cene: $4.34, $0.47, $3.66, $1.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 555:
+  Cene: $4.34, $1.31, $0.47, $3.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 556:
+  Cene: $4.34, $1.31, $3.66, $0.47
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 557:
+  Cene: $4.34, $3.66, $0.47, $1.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 558:
+  Cene: $4.34, $3.66, $1.31, $0.47
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 559:
+  Cene: $4.49, $0.64, $0.91, $3.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 560:
+  Cene: $4.49, $0.64, $3.74, $0.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 561:
+  Cene: $4.49, $0.91, $0.64, $3.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 562:
+  Cene: $4.49, $0.91, $3.74, $0.64
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 563:
+  Cene: $4.49, $3.74, $0.64, $0.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 564:
+  Cene: $4.49, $3.74, $0.91, $0.64
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 565:
+  Cene: $4.52, $0.57, $1.04, $3.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 566:
+  Cene: $4.52, $0.57, $3.65, $1.04
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 567:
+  Cene: $4.52, $1.04, $0.57, $3.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 568:
+  Cene: $4.52, $1.04, $3.65, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 569:
+  Cene: $4.52, $3.65, $0.57, $1.04
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 570:
+  Cene: $4.52, $3.65, $1.04, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 571:
+  Cene: $4.56, $0.43, $1.53, $3.26
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 572:
+  Cene: $4.56, $0.43, $3.26, $1.53
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 573:
+  Cene: $4.56, $1.53, $0.43, $3.26
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 574:
+  Cene: $4.56, $1.53, $3.26, $0.43
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 575:
+  Cene: $4.56, $3.26, $0.43, $1.53
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 576:
+  Cene: $4.56, $3.26, $1.53, $0.43
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 577:
+  Cene: $4.60, $0.40, $1.76, $3.02
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 578:
+  Cene: $4.60, $0.40, $3.02, $1.76
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 579:
+  Cene: $4.60, $1.76, $0.40, $3.02
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 580:
+  Cene: $4.60, $1.76, $3.02, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 581:
+  Cene: $4.60, $3.02, $0.40, $1.76
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 582:
+  Cene: $4.60, $3.02, $1.76, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 583:
+  Cene: $4.66, $0.74, $0.79, $3.59
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 584:
+  Cene: $4.66, $0.74, $3.59, $0.79
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 585:
+  Cene: $4.66, $0.79, $0.74, $3.59
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 586:
+  Cene: $4.66, $0.79, $3.59, $0.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 587:
+  Cene: $4.66, $3.59, $0.74, $0.79
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 588:
+  Cene: $4.66, $3.59, $0.79, $0.74
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 589:
+  Cene: $4.73, $0.38, $2.23, $2.44
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 590:
+  Cene: $4.73, $0.38, $2.44, $2.23
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 591:
+  Cene: $4.73, $2.23, $0.38, $2.44
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 592:
+  Cene: $4.73, $2.23, $2.44, $0.38
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 593:
+  Cene: $4.73, $2.44, $0.38, $2.23
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 594:
+  Cene: $4.73, $2.44, $2.23, $0.38
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 595:
+  Cene: $4.90, $0.67, $0.90, $3.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 596:
+  Cene: $4.90, $0.67, $3.31, $0.90
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 597:
+  Cene: $4.90, $0.90, $0.67, $3.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 598:
+  Cene: $4.90, $0.90, $3.31, $0.67
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 599:
+  Cene: $4.90, $3.31, $0.67, $0.90
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 600:
+  Cene: $4.90, $3.31, $0.90, $0.67
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 601:
+  Cene: $4.91, $0.40, $2.11, $2.36
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 602:
+  Cene: $4.91, $0.40, $2.36, $2.11
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 603:
+  Cene: $4.91, $2.11, $0.40, $2.36
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 604:
+  Cene: $4.91, $2.11, $2.36, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 605:
+  Cene: $4.91, $2.36, $0.40, $2.11
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 606:
+  Cene: $4.91, $2.36, $2.11, $0.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 607:
+  Cene: $4.99, $0.64, $0.96, $3.19
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 608:
+  Cene: $4.99, $0.64, $3.19, $0.96
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 609:
+  Cene: $4.99, $0.96, $0.64, $3.19
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 610:
+  Cene: $4.99, $0.96, $3.19, $0.64
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 611:
+  Cene: $4.99, $3.19, $0.64, $0.96
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 612:
+  Cene: $4.99, $3.19, $0.96, $0.64
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 613:
+  Cene: $5.24, $0.70, $0.91, $2.93
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 614:
+  Cene: $5.24, $0.70, $2.93, $0.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 615:
+  Cene: $5.24, $0.91, $0.70, $2.93
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 616:
+  Cene: $5.24, $0.91, $2.93, $0.70
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 617:
+  Cene: $5.24, $2.93, $0.70, $0.91
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 618:
+  Cene: $5.24, $2.93, $0.91, $0.70
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 619:
+  Cene: $5.32, $0.46, $1.94, $2.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 620:
+  Cene: $5.32, $0.46, $2.06, $1.94
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 621:
+  Cene: $5.32, $1.94, $0.46, $2.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 622:
+  Cene: $5.32, $1.94, $2.06, $0.46
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 623:
+  Cene: $5.32, $2.06, $0.46, $1.94
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 624:
+  Cene: $5.32, $2.06, $1.94, $0.46
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 625:
+  Cene: $5.47, $0.63, $1.10, $2.58
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 626:
+  Cene: $5.47, $0.63, $2.58, $1.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 627:
+  Cene: $5.47, $1.10, $0.63, $2.58
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 628:
+  Cene: $5.47, $1.10, $2.58, $0.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 629:
+  Cene: $5.47, $2.58, $0.63, $1.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 630:
+  Cene: $5.47, $2.58, $1.10, $0.63
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 631:
+  Cene: $5.63, $0.68, $1.06, $2.41
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 632:
+  Cene: $5.63, $0.68, $2.41, $1.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 633:
+  Cene: $5.63, $1.06, $0.68, $2.41
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 634:
+  Cene: $5.63, $1.06, $2.41, $0.68
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 635:
+  Cene: $5.63, $2.41, $0.68, $1.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 636:
+  Cene: $5.63, $2.41, $1.06, $0.68
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 637:
+  Cene: $5.71, $0.57, $1.51, $1.99
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 638:
+  Cene: $5.71, $0.57, $1.99, $1.51
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 639:
+  Cene: $5.71, $1.51, $0.57, $1.99
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 640:
+  Cene: $5.71, $1.51, $1.99, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 641:
+  Cene: $5.71, $1.99, $0.57, $1.51
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 642:
+  Cene: $5.71, $1.99, $1.51, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 643:
+  Cene: $5.74, $0.57, $1.59, $1.88
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 644:
+  Cene: $5.74, $0.57, $1.88, $1.59
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 645:
+  Cene: $5.74, $1.59, $0.57, $1.88
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 646:
+  Cene: $5.74, $1.59, $1.88, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 647:
+  Cene: $5.74, $1.88, $0.57, $1.59
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 648:
+  Cene: $5.74, $1.88, $1.59, $0.57
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 649:
+  Cene: $5.75, $0.71, $1.06, $2.26
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 650:
+  Cene: $5.75, $0.71, $2.26, $1.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 651:
+  Cene: $5.75, $1.06, $0.71, $2.26
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 652:
+  Cene: $5.75, $1.06, $2.26, $0.71
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 653:
+  Cene: $5.75, $2.26, $0.71, $1.06
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 654:
+  Cene: $5.75, $2.26, $1.06, $0.71
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 655:
+  Cene: $5.79, $0.68, $1.15, $2.16
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 656:
+  Cene: $5.79, $0.68, $2.16, $1.15
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 657:
+  Cene: $5.79, $1.15, $0.68, $2.16
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 658:
+  Cene: $5.79, $1.15, $2.16, $0.68
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 659:
+  Cene: $5.79, $2.16, $0.68, $1.15
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 660:
+  Cene: $5.79, $2.16, $1.15, $0.68
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 661:
+  Cene: $5.82, $0.66, $1.23, $2.07
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 662:
+  Cene: $5.82, $0.66, $2.07, $1.23
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 663:
+  Cene: $5.82, $1.23, $0.66, $2.07
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 664:
+  Cene: $5.82, $1.23, $2.07, $0.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 665:
+  Cene: $5.82, $2.07, $0.66, $1.23
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 666:
+  Cene: $5.82, $2.07, $1.23, $0.66
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 667:
+  Cene: $5.86, $0.65, $1.31, $1.96
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 668:
+  Cene: $5.86, $0.65, $1.96, $1.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 669:
+  Cene: $5.86, $1.31, $0.65, $1.96
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 670:
+  Cene: $5.86, $1.31, $1.96, $0.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 671:
+  Cene: $5.86, $1.96, $0.65, $1.31
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 672:
+  Cene: $5.86, $1.96, $1.31, $0.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 673:
+  Cene: $5.94, $0.65, $1.49, $1.70
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 674:
+  Cene: $5.94, $0.65, $1.70, $1.49
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 675:
+  Cene: $5.94, $1.49, $0.65, $1.70
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 676:
+  Cene: $5.94, $1.49, $1.70, $0.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 677:
+  Cene: $5.94, $1.70, $0.65, $1.49
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 678:
+  Cene: $5.94, $1.70, $1.49, $0.65
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 679:
+  Cene: $6.04, $0.80, $1.10, $1.84
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 680:
+  Cene: $6.04, $0.80, $1.84, $1.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 681:
+  Cene: $6.04, $1.10, $0.80, $1.84
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 682:
+  Cene: $6.04, $1.10, $1.84, $0.80
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 683:
+  Cene: $6.04, $1.84, $0.80, $1.10
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 684:
+  Cene: $6.04, $1.84, $1.10, $0.80
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 685:
+  Cene: $6.13, $0.77, $1.40, $1.48
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 686:
+  Cene: $6.13, $0.77, $1.48, $1.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 687:
+  Cene: $6.13, $1.40, $0.77, $1.48
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 688:
+  Cene: $6.13, $1.40, $1.48, $0.77
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 689:
+  Cene: $6.13, $1.48, $0.77, $1.40
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 690:
+  Cene: $6.13, $1.48, $1.40, $0.77
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 691:
+  Cene: $6.24, $0.95, $1.13, $1.46
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 692:
+  Cene: $6.24, $0.95, $1.46, $1.13
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 693:
+  Cene: $6.24, $1.13, $0.95, $1.46
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 694:
+  Cene: $6.24, $1.13, $1.46, $0.95
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 695:
+  Cene: $6.24, $1.46, $0.95, $1.13
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+Resenje 696:
+  Cene: $6.24, $1.46, $1.13, $0.95
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+========================================
+(v) POREDJENJE BRZINE PROGRAMA
+========================================
+
+TEORIJSKA ANALIZA:
+------------------
+Metod (a) - 4 cene:
+  Slozenost: O(n^4)
+  Teorijski maksimum: 978^4 = 914,861,642,256 poziva
+
+Metod (b) - 3 cene:
+  Slozenost: O(n^3)
+  Teorijski maksimum: 978^3 = 935,441,352 poziva
+
+Teorijsko ubrzanje: 978^4 / 978^3 = 978x
+
+
+STVARNI REZULTATI:
+------------------
+Metod (a):
+  Broj poziva: 914861642256
+  Vreme: 2214.95 sekundi
+         ≈ 36.92 minuta
+         ≈ 0.62 sati
+
+Metod (b):
+  Broj poziva: 935441352
+  Vreme: 3.24 sekundi
+         ≈ 0.05 minuta
+         ≈ 0.00 sati
+
+Odnos broja poziva: 978.0x (metod a / metod b)
+Odnos vremena: 683.2x (metod a / metod b)
+
+
+ZAKLJUCAK:
+----------
+Metod (b) je brzi od metoda (a) za faktor 978x.
+
+Razlog: Eliminisanjem jedne dimenzije pretrage (koristeci relaciju
+p4 = 9.78 - p1 - p2 - p3), redukovana je slozenost sa O(n^4) na O(n^3),
+sto direktno dovodi do 978x manjeg broja iteracija.
+
