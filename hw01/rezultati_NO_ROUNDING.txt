@@ -1,0 +1,102 @@
+========================================
+INZENJERSKI OPTIMIZACIONI ALGORITMI
+Domaci zadatak 1
+----------------------------------------
+Autor: Jovan Mosurovic 2022/0589
+========================================
+
+ZADATAK:
+------------------
+Kupac je kupio cetiri proizvoda.
+Zbir svih cena: $9.78
+Proizvod svih cena: $9.78
+Cene se zaokruzuju na $0.01 (1 cent)
+
+USLOVI:
+p1 + p2 + p3 + p4 = 9.78
+p1 x p2 x p3 x p4 = 9.78
+0.01 <= pi <= 9.78, i = 1,2,3,4
+
+========================================
+(a) METOD SA 4 CENE - POTPUNA PRETRAGA
+========================================
+
+Teorijski maksimalan broj poziva: 978^4 = 914,861,642,256
+Stvarni broj poziva: 38353534065
+Vreme izvrsavanja: 1825.39 sekundi
+                   ≈ 30.42 minuta
+                   ≈ 0.51 sati
+
+PRONADJENA RESENJA - METOD (a)
+========================================
+
+Ukupan broj resenja: 1
+
+Resenje 1:
+  Cene: $0.40, $1.63, $3.75, $4.00
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+========================================
+(b) METOD SA 3 CENE - REDUKOVAN PROSTOR
+========================================
+
+Teorijski maksimalan broj poziva: 978^3 = 935,441,352
+Stvarni broj poziva: 154506682
+Vreme izvrsavanja: 3.03 sekundi
+                   ≈ 0.05 minuta
+                   ≈ 0.00 sati
+
+PRONADJENA RESENJA - METOD (b)
+========================================
+
+Ukupan broj resenja: 1
+
+Resenje 1:
+  Cene: $0.40, $1.63, $3.75, $4.00
+  Zbir:     $9.78
+  Proizvod: $9.78
+
+========================================
+(v) POREDJENJE BRZINE PROGRAMA
+========================================
+
+TEORIJSKA ANALIZA:
+------------------
+Metod (a) - 4 cene:
+  Slozenost: O(n^4)
+  Teorijski maksimum: 978^4 = 914,861,642,256 poziva
+
+Metod (b) - 3 cene:
+  Slozenost: O(n^3)
+  Teorijski maksimum: 978^3 = 935,441,352 poziva
+
+Teorijsko ubrzanje: 978^4 / 978^3 = 978x
+
+
+STVARNI REZULTATI:
+------------------
+Metod (a):
+  Broj poziva: 38353534065
+  Vreme: 1825.39 sekundi
+         ≈ 30.42 minuta
+         ≈ 0.51 sati
+
+Metod (b):
+  Broj poziva: 154506682
+  Vreme: 3.03 sekundi
+         ≈ 0.05 minuta
+         ≈ 0.00 sati
+
+Odnos broja poziva: 248.2x (metod a / metod b)
+Odnos vremena: 602.6x (metod a / metod b)
+
+
+ZAKLJUCAK:
+----------
+Metod (b) je brzi od metoda (a) za faktor 248x.
+
+Razlog: Eliminisanjem jedne dimenzije pretrage (koristeci relaciju
+p4 = 9.78 - p1 - p2 - p3), redukovana je slozenost sa O(n^4) na O(n^3),
+sto direktno dovodi do 978x manjeg broja iteracija.
+

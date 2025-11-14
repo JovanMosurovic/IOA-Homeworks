@@ -5,6 +5,7 @@
 using namespace std;
 
 constexpr double TARGET = 9.78;
+constexpr long long TARGET_PRODUCT_CENTS = 978000000LL;  // 9.78 * 100^4
 constexpr double TOLERANCE = 0.0001;
 constexpr int MAX_PRICE_CENTS = 978;
 
@@ -31,15 +32,34 @@ long long bruteForce4Prices(ofstream& output, vector<Solution>& solutions) {
 
                     // OPTIMIZACIJA: izbegavanje permutacija
                     // Broj provera se smanjuje približno 24 puta -> permutacije četiri broja imaju 4! = 24 kombinacije
-                    // if (!(p1 <= p2 && p2 <= p3 && p3 <= p4))
-                    //     continue;
+                    if (!(p1 <= p2 && p2 <= p3 && p3 <= p4))
+                        continue;
 
                     functionCalls++;
 
-                    const double sum = price1 + price2 + price3 + price4;
-                    const double product = price1 * price2 * price3 * price4;
+                    // Previous implementation - valid but less precise due to rounding
+                    // const double sum = price1 + price2 + price3 + price4;
+                    // const double product = price1 * price2 * price3 * price4;
+                    //
+                    // if (fabs(sum - TARGET) < TOLERANCE && fabs(product - TARGET) < TOLERANCE) {
+                    //     Solution sol{price1, price2, price3, price4, sum, product};
+                    //     solutions.push_back(sol);
+                    // }
 
-                    if (fabs(sum - TARGET) < TOLERANCE && fabs(product - TARGET) < TOLERANCE) {
+                    int p1_cents = (int)round(price1 * 100);
+                    int p2_cents = (int)round(price2 * 100);
+                    int p3_cents = (int)round(price3 * 100);
+                    int p4_cents = (int)round(price4 * 100);
+
+                    int sum_cents = p1_cents + p2_cents + p3_cents + p4_cents;
+                    if (sum_cents != MAX_PRICE_CENTS)
+                        continue;
+
+                    long long product_cents = (long long)p1_cents * p2_cents * p3_cents * p4_cents;
+
+                    if (product_cents == TARGET_PRODUCT_CENTS) {
+                        double sum = price1 + price2 + price3 + price4;
+                        double product = price1 * price2 * price3 * price4;
                         Solution sol{price1, price2, price3, price4, sum, product};
                         solutions.push_back(sol);
                     }
@@ -74,7 +94,6 @@ long long bruteForce3Prices(ofstream& output, vector<Solution>& solutions) {
 
             for (int p3 = 1; p3 <= MAX_PRICE_CENTS; p3++) {
                 double price3 = p3 / 100.0;
-                functionCalls++;
 
                 double price4 = TARGET - price1 - price2 - price3;
 
@@ -85,10 +104,32 @@ long long bruteForce3Prices(ofstream& output, vector<Solution>& solutions) {
                 if (fabs(price4 - rounded) > TOLERANCE)
                     continue;
 
-                double product = price1 * price2 * price3 * price4;
+                functionCalls++;
 
-                if (fabs(product - TARGET) < TOLERANCE) {
+                // Previous implementation - valid but less precise due to rounding
+                // double product = price1 * price2 * price3 * price4;
+                //
+                // if (fabs(product - TARGET) < TOLERANCE) {
+                //     double sum = price1 + price2 + price3 + price4;
+                //     Solution sol{price1, price2, price3, price4, sum, product};
+                //     solutions.push_back(sol);
+                // }
+
+                // OPTIMIZACIJA: izbegavanje permutacija
+                // Broj provera se smanjuje približno 24 puta -> permutacije četiri broja imaju 4! = 24 kombinacije
+                if (!(p1 <= p2 && p2 <= p3 && price3 <= price4))
+                    continue;
+
+                int p1_cents = (int)round(price1 * 100);
+                int p2_cents = (int)round(price2 * 100);
+                int p3_cents = (int)round(price3 * 100);
+                int p4_cents = (int)round(price4 * 100);
+
+                long long product_cents = (long long)p1_cents * p2_cents * p3_cents * p4_cents;
+
+                if (product_cents == TARGET_PRODUCT_CENTS) {
                     double sum = price1 + price2 + price3 + price4;
+                    double product = price1 * price2 * price3 * price4;
                     Solution sol{price1, price2, price3, price4, sum, product};
                     solutions.push_back(sol);
                 }
@@ -106,7 +147,7 @@ long long bruteForce3Prices(ofstream& output, vector<Solution>& solutions) {
 }
 
 int main() {
-    ofstream output("rezultati.txt");
+    ofstream output("rezultati_NO_ROUNDING.txt");
 
     if (!output.is_open()) {
         cerr << "Greska pri otvaranju fajla rezultati.txt!\n";
