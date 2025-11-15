@@ -9,6 +9,9 @@
 
 using namespace std;
 
+constexpr int MAX_HOLES = 13;  // Maximum number of holes
+constexpr int MAX_REMAINING = 12;  // Maximum remaining holes in permutation
+
 struct Point {
     int id;
     double x;
@@ -43,7 +46,7 @@ void printPath(const int* path, const int numPoints, const vector<Point>& points
 }
 
 // Function for printing detailed path with coordinates and segment distances
-void printDetailedPath(const int* path, const int numPoints, const vector<Point>& points, const vector<vector<double>>& distMatrix) {
+void printDetailedPath(const int* path, const int numPoints, const vector<Point>& points, const double distMatrix[][MAX_HOLES]) {
     cout << "\nDetailed path breakdown:\n";
     cout << ProjectInfo::SEPARATOR_SMALL << "\n";
     for (int i = 0; i < numPoints; i++) {
@@ -117,7 +120,7 @@ void solveTSP(vector<Point>& points, const int numPoints) {
 
     const vector<Point> selectedPoints(points.begin(), points.begin() + numPoints);
 
-    vector<vector<double>> distMatrix(numPoints, vector<double>(numPoints, 0.0));
+    double distMatrix[MAX_HOLES][MAX_HOLES] = {};
     for (int i = 0; i < numPoints; i++) {
         for (int j = i + 1; j < numPoints; j++) {
             const double dist = distanceBetweenTwoPoints(selectedPoints[i], selectedPoints[j]);
@@ -127,11 +130,11 @@ void solveTSP(vector<Point>& points, const int numPoints) {
     }
 
     double globalMinLength = numeric_limits<double>::max();
-    const auto globalBestPath = new int[numPoints];
+    int globalBestPath[MAX_HOLES];
     long long totalPermutations = 0;
 
     for (int startPoint = 0; startPoint < numPoints; startPoint++) {
-        const auto P = new int[numPoints - 1];
+        int P[MAX_REMAINING];
         int idx = 0;
         for (int i = 0; i < numPoints; i++) {
             if (i != startPoint) {
@@ -142,29 +145,20 @@ void solveTSP(vector<Point>& points, const int numPoints) {
         do {
             totalPermutations++;
 
-            const auto fullPath = new int[numPoints];
-            fullPath[0] = startPoint;
-            for (int i = 0; i < numPoints - 1; i++) {
-                fullPath[i + 1] = P[i];
-            }
-
-            double currentLength = 0.0;
-            for (int i = 0; i < numPoints - 1; i++) {
-                currentLength += distMatrix[fullPath[i]][fullPath[i + 1]];
+            double currentLength = distMatrix[startPoint][P[0]];
+            for (int i = 0; i < numPoints - 2; i++) {
+                currentLength += distMatrix[P[i]][P[i + 1]];
             }
 
             if (currentLength < globalMinLength) {
                 globalMinLength = currentLength;
-                for (int i = 0; i < numPoints; i++) {
-                    globalBestPath[i] = fullPath[i];
+                globalBestPath[0] = startPoint;
+                for (int i = 0; i < numPoints - 1; i++) {
+                    globalBestPath[i + 1] = P[i];
                 }
             }
 
-            delete[] fullPath;
-
         } while (next_permutation(numPoints - 1, P));
-
-        delete[] P;
     }
 
     const clock_t endTime = clock();
@@ -176,8 +170,6 @@ void solveTSP(vector<Point>& points, const int numPoints) {
     printPath(globalBestPath, numPoints, selectedPoints, globalMinLength);
 
     printDetailedPath(globalBestPath, numPoints, selectedPoints, distMatrix);
-
-    delete[] globalBestPath;
 }
 
 int main() {
