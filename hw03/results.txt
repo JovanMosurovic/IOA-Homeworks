@@ -1,0 +1,33 @@
+==============================================
+INZENJERSKI OPTIMIZACIONI ALGORITMI
+(ENGINEERING OPTIMIZATION ALGORITHMS)
+Homework Assignment 3
+Author: Jovan Mosurovic 2022/0589
+==============================================
+
+OPTIMAL POWER GRID NETWORK
+==============================================
+
+Minimum cost: 388.00
+
+Connection path: A C - E C - C B - B J - G H - I D - D F - F H - H J
+
+Prufer sequence: 2 2 1 9 7 3 5 7
+
+----------------------------------------------
+Edge breakdown:
+----------------------------------------------
+Edge  1: A - C -> cost:  101
+Edge  2: E - C -> cost:   52
+Edge  3: C - B -> cost:   27
+Edge  4: B - J -> cost:   17
+Edge  5: G - H -> cost:   25
+Edge  6: I - D -> cost:   40
+Edge  7: D - F -> cost:   47
+Edge  8: F - H -> cost:   37
+Edge  9: H - J -> cost:   42
+
+----------------------------------------------
+Computation time: 27.130 seconds
+Trees checked: 100000000
+----------------------------------------------
