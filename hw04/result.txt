@@ -1,0 +1,31 @@
+=================================================================
+INZENJERSKI OPTIMIZACIONI ALGORITMI
+(ENGINEERING OPTIMIZATION ALGORITHMS)
+Homework Assignment 4
+Author: Jovan Mosurovic 2022/0589
+=================================================================
+
+OPTIMAL SOLAR PANEL OPEN-CIRCUIT VOLTAGE
+=================================================================
+
+Method: Newton's method (Newton-Raphson)
+
+Parameters:
+-----------------------------------------------------------------
+I_L   = 7.24 A (light-generated current)
+I_0   = 4.72e-09 A (reverse saturation current)
+a     = 1.22 V (modified ideality parameter)
+R_sh  = 144.2 Ω (shunt resistance)
+R_s   = 218.5 mΩ (series resistance)
+
+Result:
+-----------------------------------------------------------------
+U = 25.7738188496 V
+U = 25773818.8496 µV
+
+Verification:
+-----------------------------------------------------------------
+f(U) = -1.50e-14 A
+
+Accuracy: ±1 µV (±1e-6 V)
+=================================================================
