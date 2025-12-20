@@ -1,0 +1,32 @@
+=================================================================
+INZENJERSKI OPTIMIZACIONI ALGORITMI
+(ENGINEERING OPTIMIZATION ALGORITHMS)
+Homework Assignment 6
+Author: Jovan Mosurovic (2022/0589)
+=================================================================
+
+OPTIMALNO RESENJE
+-----------------------------------------------------------------
+
+Vektor resenja:
+x = [400.0, 0.0, 300.0, 500.0, 0.0, 0.0, 0.0, 100.0, 0.0, 0.0, 800.0, 0.0, 0.0, 0.0, 400.0]
+
+Matrica transporta [broj racunara]:
+
+            Centar 2  Centar 3  Centar 5
+Fabrika 1:      400         0       300
+Fabrika 2:      500         0         0
+Fabrika 3:        0       100         0
+Fabrika 4:        0       800         0
+Fabrika 5:        0         0       400
+
+Detaljan plan:
+F1 -> C2:    400 x 2.0 = 800.00 EUR
+F1 -> C5:    300 x 2.4 = 720.00 EUR
+F2 -> C2:    500 x 0.0 = 0.00 EUR
+F3 -> C3:    100 x 0.0 = 0.00 EUR
+F4 -> C3:    800 x 0.8 = 640.00 EUR
+F5 -> C5:    400 x 0.0 = 0.00 EUR
+
+Minimalna ukupna cena: 2160.00 EUR
+=================================================================
