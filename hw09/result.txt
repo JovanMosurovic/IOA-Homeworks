@@ -1,0 +1,20 @@
+================================================================================
+INZENJERSKI OPTIMIZACIONI ALGORITMI
+(ENGINEERING OPTIMIZATION ALGORITHMS)
+Homework Assignment 9
+Autor: Jovan Mosurovic (2022/0589)
+================================================================================
+
+NAJBOLJE PRONADJENO RESENJE - DIFERENCIJALNA EVOLUCIJA
+================================================================================
+
+x=(-8.499999238601992, 4.999998974611440, 6.499999649559793, -6.500000326095958, -3.000000187888261, 1.000000207517755)
+
+x≈(-8.5, 5.0, 6.5, -6.5, -3.0, 1.0)
+
+Minimalna vrednost optimizacione funkcije: f_opt = 4.759380783018461e-15
+Broj iteracija: 597
+
+Postignuta trazena preciznost (f_opt <= 10^-14)
+
+================================================================================
